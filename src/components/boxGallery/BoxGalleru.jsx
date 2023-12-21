@@ -3,7 +3,7 @@ import { Medium, Small } from "../contacts/style";
 import { Buttons } from "../generic/listCard/style";
 import { Text } from "../modal/style";
 
-const Galler = () => {
+const BoxGalleru = () => {
   return (
     <Wrapper>
       <Container>
@@ -30,4 +30,4 @@ const Galler = () => {
   );
 };
 
-export default Galler;
+export default BoxGalleru;

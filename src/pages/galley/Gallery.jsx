@@ -1,12 +1,12 @@
-import GalleryItem from "../../components/gallery/Item/GalleryItem";
-import Galler from "../../components/gallery/gallery";
+import BoxGalleru from "../../components/boxGallery/BoxGalleru";
+import BoxItem from "../../components/boxGallery/Item/BoxItem";
 import Gen from "../../components/general/gen/Gen";
 
 const Gallery = () => {
   return (
     <div className="flex flex-col">
-      <Galler />
-      <GalleryItem />
+      <BoxGalleru />
+      <BoxItem />
       <div className="mt-[-100px]">
         <Gen
           title="Новости компании"

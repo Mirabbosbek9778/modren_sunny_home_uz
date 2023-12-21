@@ -5,7 +5,7 @@ import Product2 from "../../../assets/images/product2.png";
 import Product3 from "../../../assets/images/product3.png";
 import Product5 from "../../../assets/images/product5.png";
 
-const GalleryItem = () => {
+const BoxItem = () => {
   return (
     <Wrapper>
       <Container>
@@ -412,4 +412,4 @@ const GalleryItem = () => {
   );
 };
 
-export default GalleryItem;
+export default BoxItem;
