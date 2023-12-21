@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const COntent = styled.div`
-  width: 453px;
-  padding: 30px 21px 30px 20px;
+  width: ${({ size }) => (size ? "681px" : "453px")};
+  padding: ${({ size }) =>
+    size ? "46px 24px 26px 24px" : "30px 21px 30px 20px"};
   background: white;
   border-radius: 16px;
   display: flex;
@@ -43,11 +44,50 @@ const CompaniaP = styled.div`
 `;
 
 const CompaniaPlugin = styled.div`
-color: var(--Text-Main, #121014);
-font-family: Inter,sans-serif;
-font-size: 52px;
-font-style: normal;
-font-weight: 700;
-line-height: 60px; /* 115.385% */
+  color: var(--Text-Main, #121014);
+  font-family: Inter, sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 115.385% */
 `;
-export { COntent, Parag1, TextBold, CompaniaP, CompaniaPlugin };
+
+const Whitetext = styled.div`
+  color: var(--BTN-text, #fff);
+  font-family: Inter, sans-serif;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 55px; /* 98.214% */
+  width: 594px;
+`;
+
+const Buttons = styled.button`
+  color: var(--BTN-color, #fff);
+  font-family: Inter, sans-serif;
+  display: flex;
+  padding: 22px 36px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  gap: 10px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: 1000px;
+  line-height: 28px;
+  color: black;
+  &:hover {
+    background: var(--Primary-Default, #0e677c);
+    color: white;
+  }
+`;
+export {
+  COntent,
+  Parag1,
+  TextBold,
+  CompaniaP,
+  CompaniaPlugin,
+  Whitetext,
+  Buttons,
+};
