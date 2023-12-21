@@ -27,13 +27,14 @@ const Text = styled.div`
 
 const Input = styled.input`
   display: flex;
-  height: 60px;
+  height: ${({ size }) => (size ? "124px" : "60px")};
   padding: 21px 470px 20px 16px;
+  width: 563px;
   align-items: center;
   align-self: stretch;
   border-radius: 12px;
   color: var(--Text-Secondary, #686868);
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -45,11 +46,29 @@ const Input = styled.input`
 const ModalText = styled.h1`
   color: var(--Text-Main, #121014);
   text-align: center;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   width: 581px;
 `;
-export { Container, Main, Text, Input, ModalText };
+
+const ModalButton = styled.button`
+  display: flex;
+  width: 339px;
+  height: 60px;
+  padding: 21px 0px 20px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--Primary-Default, #0e677c);
+  color: var(--BTN-text, #fff);
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+export { Container, Main, Text, Input, ModalText, ModalButton };

@@ -27,7 +27,7 @@ const Xonsulting = () => {
         <div className="flex flex-wrap gap-[5px]">
           <div className="flex w-full justify-end pr-14 gap-1">
             <Card
-              description="Записаться на бесплатную консультацию"
+              description=" Основываясь на требованиях и потребностях клиента, создаем дичные решения."
               title="Получить консультацию"
             />
             <img src={Foot1} alt="" />

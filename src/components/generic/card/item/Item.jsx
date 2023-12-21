@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
-import { Container, Input, Main, ModalText, Text } from "../style";
+import { Container, Input, Main, ModalButton, ModalText, Text } from "../style";
 import { useState } from "react";
-import { Button, Modal } from "antd";
+import { Modal } from "antd";
+import { P } from "../../../contacts/style";
 
 const Item = (props) => {
   const [open, setOpen] = useState(false);
@@ -10,14 +11,14 @@ const Item = (props) => {
     <Container size="true">
       <Main>
         <Text>{props?.description}</Text>
-        <div className="flex items-center">
+        <div className="flex items-center justify-between">
           <Text className="w-[238px]" size="true">
             {props?.title}
           </Text>
           <div>
-            <Button
+            <div
               onClick={() => setOpen(true)}
-              className="border-none outline-none"
+              className="border-none outline-none pt-[85px] pr-[1px]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,16 +43,17 @@ const Item = (props) => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </Button>
+            </div>
             <Modal
               centered
               open={open}
               width={1000}
               className="outline-none"
               visible={open}
+              footer={null}
             >
-              <div className="flex flex-col justify-between">
-                <ModalText>
+              <div className="flex flex-col justify-center gap-10 mt-16 w-full items-center mb-16">
+                <ModalText className="flex justify-center  w-full">
                   Наши сотрудники позвонят вам в течении 48 часов и ответят на
                   все ваши вопросы
                 </ModalText>
@@ -62,12 +64,21 @@ const Item = (props) => {
                     className="text-black"
                   />
                   <Input type="tel" placeholder="+998 ___ __ __" />
-                  <Input type="text" placeholder="Комментарий или вопрос" />
-                  <p>
-                    Нажимая на кнопку «Отправить» вы соглашаетесьс политикой
-                    конфиденциальности
-                  </p>
-                  <button>Отправить</button>
+                  <Input
+                    type="text"
+                    placeholder="Комментарий или вопрос"
+                    className="h-[124px]"
+                    size="true"
+                  />
+                  <div className="flex items-center">
+                    <P>
+                      Нажимая на кнопку «Отправить» вы соглашаетесьс политикой
+                      конфиденциальности
+                    </P>
+                    <ModalButton onClick={() => setOpen(false)}>
+                      Отправить
+                    </ModalButton>
+                  </div>
                 </div>
               </div>
             </Modal>

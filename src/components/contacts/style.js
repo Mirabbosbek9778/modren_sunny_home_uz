@@ -73,7 +73,7 @@ const P = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 300px;
+  width: 230px;
   height: 51px;
   text-decoration-line: ${({ under }) => (under ? "underline" : "")};
   cursor: ${({ under }) => (under ? "pointer" : "")};
