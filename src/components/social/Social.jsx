@@ -11,8 +11,10 @@ const Social = () => {
         </TextSocial>
         <div className="flex gap-3">
           <Cons>
-            <img src={Telegram} alt="" />
-            <TextSocial size="true">User name</TextSocial>
+            <img src={Telegram} alt="Telegram" />
+            <TextSocial size="true">
+              <a href="https://t.me/sherbee535">User name</a>
+            </TextSocial>
           </Cons>
           <Cons>
             <svg

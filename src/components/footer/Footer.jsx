@@ -25,18 +25,14 @@ const Footer = () => {
               </TextSocial>
             </div>
             <div className="flex flex-col gap-4">
-              <TextSocial colur="true">
-                <Link to="/product">Продукты</Link>
-              </TextSocial>
+              <TextSocial colur="true">Продукты</TextSocial>
               <TextSocial>
                 <Link to="/product">Жилые комплексы</Link>
               </TextSocial>
               <TextSocial>Коммерческие комплексы</TextSocial>
             </div>
             <div className="flex flex-col gap-4">
-              <TextSocial colur="true">
-                <Link to="/information">Общая информация</Link>
-              </TextSocial>
+              <TextSocial colur="true">Общая информация</TextSocial>
               <TextSocial>Используемое сырье</TextSocial>
               <TextSocial>
                 <Link to="/information">FAQ</Link>

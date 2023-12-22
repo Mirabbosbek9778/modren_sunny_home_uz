@@ -3,7 +3,6 @@ import { Button, P } from "../contacts/style";
 import { Con, Inputs, Parag, Text, Wrapper } from "./style";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import UzbFlag from "../../assets/icons/uzb.png";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 
@@ -36,10 +35,12 @@ const Modal = () => {
             size="true"
             colur="true"
           />
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 w-full">
             <P>
               Нажимая на кнопку «Отправить» вы соглашаетесьс{" "}
-              <P under>политикой {"  "} конфиденциальности</P>
+              <P under="true">
+                политикой {"  "} <P under="true">конфиденциальности</P>
+              </P>
             </P>
             <Button onClick={notify}>Отправить</Button>
             <ToastContainer />

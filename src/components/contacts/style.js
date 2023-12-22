@@ -73,7 +73,9 @@ const P = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 230px;
+  width: 210px;
+  display: flex;
+  flex-wrap: wrap;
   height: 51px;
   text-decoration-line: ${({ under }) => (under ? "underline" : "")};
   cursor: ${({ under }) => (under ? "pointer" : "")};
@@ -90,4 +92,11 @@ const Box = styled.div`
   gap: 4px;
 `;
 
-export { Medium, Small, Bold, Inputs, Button, P, Box };
+const Img = styled.img`
+  width: 681px;
+  height: 400px;
+  border-radius: 24px;
+  width: ${({ details }) => (details ? "681px" : "1366px")};
+`;
+
+export { Medium, Small, Bold, Inputs, Button, P, Box, Img };

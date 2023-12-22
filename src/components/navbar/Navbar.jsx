@@ -10,10 +10,29 @@ import {
   Wrapper,
 } from "./style";
 import { navbarItem } from "../../mock/navbarItem";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
+  const navbarRef = useRef(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = navbarRef.current.getBoundingClientRect().top;
+    if (offset > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <Wrapper>
+    <Wrapper scrolled={isScrolled} ref={navbarRef}>
       <Container>
         <Logo />
         <Main>

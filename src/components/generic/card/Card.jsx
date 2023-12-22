@@ -3,9 +3,17 @@ import { Container, Input, Main, ModalButton, ModalText, Text } from "./style";
 import { useState } from "react";
 import { Modal } from "antd";
 import { P } from "../../contacts/style";
+import { Plus } from "../../../assets";
 
 const Card = (props) => {
   const [open, setOpen] = useState(false);
+  const [formSubmitted] = useState(false);
+
+  const closeModal = () => {
+    if (!formSubmitted) {
+      setOpen(false);
+    }
+  };
 
   return (
     <Container>
@@ -18,38 +26,17 @@ const Card = (props) => {
           <div>
             <div
               onClick={() => setOpen(true)}
-              className="outline-none flex border-none pt-6"
+              className="outline-none flex border-none pt-[10px]"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="80"
-                viewBox="0 0 80 80"
-                fill="none"
-              >
-                <rect width="80" height="80" rx="19" fill="white" />
-                <path
-                  d="M52.3458 39.5076H28.6421"
-                  stroke="#0E677C"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M40.4976 51.358V27.6543"
-                  stroke="#0E677C"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <img src={Plus} alt="Plus" />
             </div>
             <Modal
               centered
               open={open}
               width={1000}
+              onCancel={closeModal}
               className="outline-none"
-              visible={open}
+              visible={false}
               footer={null}
             >
               <div className="flex flex-col justify-center gap-10 mt-16 w-full items-center mb-16">

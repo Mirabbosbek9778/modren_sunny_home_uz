@@ -87,6 +87,9 @@ const TextSocial = styled.div`
   font-weight: ${({ size }) => (size ? "400" : "600")};
   line-height: normal;
   color: ${({ colur }) => (colur ? "#686868" : "#121014")};
+  &:active {
+    color: ${({ size }) => (size ? "#0E677C" : "")};
+  }
 `;
 
 const Cons = styled.div`

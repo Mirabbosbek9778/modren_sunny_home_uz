@@ -6,42 +6,27 @@ import Social from "../../components/social/Social";
 import { dataNews } from "../../mock/dataNews";
 import { useNavigate } from "react-router-dom";
 import TextProduct from "../../assets/text/TextProduct";
-import { useEffect, useState } from "react";
+import { productCard } from "../../mock/productHouse";
 
 const Product = () => {
   const navigate = useNavigate();
-  const [itemProduct, setProduct] = useState([]);
-
-  useEffect(() => {
-    fetch("https://api.mshome.uz/api/products/")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("net response");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (Array.isArray(data)) {
-          setProduct(data);
-        } else {
-          throw new Error("data format not supported");
-        }
-      })
-      .catch((error) => {
-        console.error("hato", error);
-      });
-  }, []);
 
   return (
-    <div className="flex flex-col">
-      <TextProduct />
-      {itemProduct.map((item) => (
-        <Detail
-          onclick={() => navigate(`/product/detailed/${item?.id}`)}
-          key={item?.id}
-          {...item}
-        />
-      ))}
+    <div className="flex flex-col justify-center">
+      <TextProduct
+        title="Жилые комплексы"
+        name={"Продукты - Жилые комплексы"}
+      />
+      <div className="flex flex-wrap gap-1 bg-[#f0f2f4] pb-[150px] justify-center">
+        {productCard.map((item) => (
+          <Detail
+            details="true"
+            onclick={() => navigate(`/product/detailed/${item?.id}`)}
+            key={item?.id}
+            {...item}
+          />
+        ))}
+      </div>
       <div className="flex flex-col">
         <Modal />
         <div className="mt-[-143px]">
@@ -54,9 +39,11 @@ const Product = () => {
               здесь будет отоброжаться толька 4 последних новостей остальные новости о компании будет в разделе Новости илил БЛОГ "
             about=""
           />
-          {dataNews.map((item) => (
-            <NewsCard key={item?.id} {...item} />
-          ))}
+          <div className="flex justify-center gap-1 bg-[#f0f2f4] pb-[150px]">
+            {dataNews.map((item) => (
+              <NewsCard key={item?.id} {...item} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -14,7 +14,9 @@ const Home = () => {
       <Body />
       <BodyItem />
       <Modal />
-      <Social />
+      <div className="mt-[-145px]">
+        <Social />
+      </div>
       <General
         title="Готовый, комфортный и привлекательный дизайн"
         about="Преимущества"
