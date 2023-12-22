@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/logo/Logo";
 import { Container, TextSocial, Wrapper } from "../body/style";
 import { Bold, Box, Small } from "../contacts/style";
-import Facebook from "../../assets/icons/facebookFoot.svg";
-import Instagram from "../../assets/icons/insFoot.svg";
-import Youtube from "../../assets/icons/youFoot.svg";
-import Telegram from "../../assets/icons/telegFoot.svg";
+import { Facebook, Instagram, Telegram, Youtube } from "../../assets";
 
 const Footer = () => {
   return (
@@ -71,22 +68,22 @@ const Footer = () => {
           <div className="flex items-center gap-2">
             <Box>
               <a href="">
-                <img src={Facebook} alt="" />
+                <img src={Facebook} alt="Facebook" />
               </a>
             </Box>
             <Box>
               <a href="">
-                <img src={Instagram} alt="" />
+                <img src={Instagram} alt="Instagram" />
               </a>
             </Box>
             <Box>
               <a href="">
-                <img src={Youtube} alt="" />
+                <img src={Youtube} alt="Youtube" />
               </a>
             </Box>
             <Box>
-              <a href="">
-                <img src={Telegram} alt="" />
+              <a href="https://t.me/sherbee535">
+                <img src={Telegram} alt="Telegram" />
               </a>
             </Box>
           </div>

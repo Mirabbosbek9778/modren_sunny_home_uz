@@ -1,14 +1,15 @@
 import { BigText, Box, Container, Content, SmallText, Wrapper } from "./style";
 import Card from "../generic/card/Card";
-import Card1 from "../../assets/img/card1.png";
-import Card2 from "../../assets/img/card2.png";
-import Card3 from "../../assets/img/card3.png";
-import Card4 from "../../assets/img/card4.png";
-import Card5 from "../../assets/img/card5.png";
-import Card6 from "../../assets/img/card6.png";
-import Card7 from "../../assets/img/card7.png";
-import Card8 from "../../assets/img/card8.png";
-import Card9 from "../../assets/img/card9.png";
+import {
+  Card1,
+  Card2,
+  Card3,
+  Card4,
+  Card5,
+  Card6,
+  Card8,
+  Card9,
+} from "../../assets";
 
 const Body = () => {
   return (
@@ -58,7 +59,7 @@ const Body = () => {
             className="w-[340px] h-[187px] rounded-[24px] bg-[#D9D9D9]"
           />
           <img
-            src={Card7}
+            src={Card8}
             alt="Card7"
             className="w-[340px] h-[187px] rounded-[24px] bg-[#D9D9D9]"
           />

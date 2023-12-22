@@ -1,9 +1,6 @@
+import { Bag, Call, Home, Message } from "../../assets";
 import { BigText, Container, Wrapper } from "../body/style";
 import { Bold, Button, Inputs, Medium, P, Small } from "./style";
-import Call from "../../assets/icons/phone.svg";
-import Message from "../../assets/icons/message.svg";
-import Bag from "../../assets/icons/bag.svg";
-import Home from "../../assets/icons/home.svg";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

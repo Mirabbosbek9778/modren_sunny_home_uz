@@ -8,6 +8,8 @@ const Wrapper = styled.div`
   border-bottom: 1px solid var(--Line-color, rgba(18, 16, 20, 0.05));
   background: var(--Background-BLUR, rgba(255, 255, 255, 0.4));
   backdrop-filter: blur(120.5999984741211px);
+  position: fixed;
+  top: auto;
 `;
 
 const Container = styled.div`
@@ -22,7 +24,7 @@ const Text = styled.h1`
   color: #121014;
   font-family: Inter, sans-serif;
   font-style: normal;
-  font-weight: ${({ size }) => (size ? "700" : "500")};
+  font-weight: ${({ size }) => (size ? "700" : "6 00")};
   line-height: 100%;
   text-align: ${({ size }) => (size ? "right" : "")};
 `;
@@ -55,4 +57,11 @@ const Box = styled.div`
   gap: 8px;
   justify-content: end;
 `;
-export { Container, Wrapper, Text, TextCont, Main, Content, Box };
+
+const ProductCard = styled.div`
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  border: 1px solid red;
+`;
+export { Container, Wrapper, Text, TextCont, Main, Content, Box, ProductCard };

@@ -1,9 +1,5 @@
 import { H1Text, ONas, PText, Wrapper } from "../style";
-import House1 from "../../../assets/img/house1.png";
-import House2 from "../../../assets/img/house2.png";
-import House3 from "../../../assets/img/house3.png";
-import House4 from "../../../assets/img/house4.png";
-import House5 from "../../../assets/img/house5.png";
+import { House1, House2, House3, House4, House5 } from "../../../assets";
 import Card from "../../generic/card/Card";
 
 const BodyItem = () => {
@@ -20,11 +16,11 @@ const BodyItem = () => {
           </PText>
         </div>
         <div className="flex flex-wrap w-[746px] gap-1">
-          <img src={House1} alt="" />
-          <img src={House2} alt="" />
-          <img src={House3} alt="" />
-          <img src={House4} alt="" />
-          <img src={House5} alt="" />
+          <img src={House1} alt="House1" />
+          <img src={House2} alt="House1" />
+          <img src={House3} alt="House1" />
+          <img src={House4} alt="House1" />
+          <img src={House5} alt="House1" />
           <Card
             description="Для получения более подробной информации о наших дома свяжитесь с нами!"
             title="Связаться с нами"

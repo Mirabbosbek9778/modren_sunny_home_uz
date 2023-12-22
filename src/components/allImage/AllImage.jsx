@@ -1,20 +1,22 @@
+import {
+  AllIn1,
+  AllIn10,
+  AllIn11,
+  AllIn12,
+  AllIn13,
+  AllIn14,
+  AllIn15,
+  AllIn2,
+  AllIn3,
+  AllIn4,
+  AllIn5,
+  AllIn6,
+  AllIn7,
+  AllIn8,
+  AllIn9,
+} from "../../assets";
 import { Container, Wrapper } from "../body/style";
 import Card from "../generic/card/Card";
-import AllIn1 from "../../assets/img/allIn1.png";
-import AllIn2 from "../../assets/img/allIn2.png";
-import AllIn3 from "../../assets/img/allIn3.png";
-import AllIn4 from "../../assets/img/allIn4.png";
-import AllIn5 from "../../assets/img/allIn5.png";
-import AllIn6 from "../../assets/img/allIn6.png";
-import AllIn7 from "../../assets/img/allIn7.png";
-import AllIn8 from "../../assets/img/allIn8.png";
-import AllIn9 from "../../assets/img/allIn9.png";
-import AllIn10 from "../../assets/img/allIn10.png";
-import AllIn11 from "../../assets/img/allIn11.png";
-import AllIn12 from "../../assets/img/allIn12.png";
-import AllIn13 from "../../assets/img/allIn13.png";
-import AllIn14 from "../../assets/img/allIn14.png";
-import AllIn15 from "../../assets/img/allIn15.png";
 
 const AllImage = () => {
   return (

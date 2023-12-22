@@ -31,9 +31,6 @@ const Box = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  &:hover {
-    background-color: #0e677c;
-  }
 `;
 
 const H1 = styled.div`

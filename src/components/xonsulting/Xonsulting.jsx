@@ -2,15 +2,17 @@ import { ONas } from "../body/style";
 import Card from "../generic/card/Card";
 import { HidenText } from "../generic/cards/style";
 import { Wrapper } from "../questions/style";
-import Foot1 from "../../assets/img/foot1.png";
-import Foot2 from "../../assets/img/foot2.png";
-import Foot3 from "../../assets/img/foot3.png";
-import Foot4 from "../../assets/img/foot4.png";
-import Foot5 from "../../assets/img/foot5.png";
-import Foot6 from "../../assets/img/foot6.png";
-import Foot7 from "../../assets/img/foot7.png";
-import Foot8 from "../../assets/img/foot8.png";
 import { Container, Text } from "./style";
+import {
+  FootImg1,
+  FootImg2,
+  FootImg3,
+  FootImg4,
+  FootImg5,
+  FootImg6,
+  FootImg7,
+  FootImg8,
+} from "../../assets";
 
 const Xonsulting = () => {
   return (
@@ -30,18 +32,18 @@ const Xonsulting = () => {
               description=" Основываясь на требованиях и потребностях клиента, создаем дичные решения."
               title="Получить консультацию"
             />
-            <img src={Foot1} alt="" />
+            <img src={FootImg1} alt="" />
           </div>
           <div className="flex justify-end w-full pr-14 gap-1">
-            <img src={Foot3} alt="" />
-            <img src={Foot2} alt="" />
-            <img src={Foot4} alt="" />
+            <img src={FootImg2} alt="" />
+            <img src={FootImg3} alt="" />
+            <img src={FootImg4} alt="" />
           </div>
           <div className="flex gap-1 justify-end">
-            <img src={Foot5} alt="" />
-            <img src={Foot7} alt="" />
-            <img src={Foot8} alt="" />
-            <img src={Foot6} alt="" />
+            <img src={FootImg5} alt="" />
+            <img src={FootImg6} alt="" />
+            <img src={FootImg7} alt="" />
+            <img src={FootImg8} alt="" />
           </div>
         </div>
       </Container>

@@ -14,6 +14,7 @@ const Inputs = styled.input`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  outline: none;
 `;
 
 const Text = styled.div`

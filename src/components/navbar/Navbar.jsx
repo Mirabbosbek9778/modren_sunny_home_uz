@@ -9,6 +9,7 @@ import {
   TextCont,
   Wrapper,
 } from "./style";
+import { navbarItem } from "../../mock/navbarItem";
 
 const Navbar = () => {
   return (
@@ -16,24 +17,11 @@ const Navbar = () => {
       <Container>
         <Logo />
         <Main>
-          <Link to="/about">
-            <Text>О компании</Text>
-          </Link>
-          <Link to="/product">
-            <Text>Продукты</Text>
-          </Link>
-          <Link to="/gallery">
-            <Text>Галерея</Text>
-          </Link>
-          <Link to="/information">
-            <Text>Общая информация</Text>
-          </Link>
-          <Link to="/blog">
-            <Text>Блог</Text>
-          </Link>
-          <Link to="/contact">
-            <Text>Контакты</Text>
-          </Link>
+          {navbarItem?.map((item) => (
+            <Link key={item?.id} to={`/${item?.path}`}>
+              <Text>{item?.name}</Text>
+            </Link>
+          ))}
         </Main>
         <Content>
           <Text size="true">+998 95 552 06 06</Text>

@@ -1,9 +1,6 @@
+import { Product1, Product2, Product3, Product5 } from "../../../assets";
 import { Container, Wrapper } from "../../body/style";
 import { Texts } from "../../products/style";
-import Product1 from "../../../assets/images/produc1.png";
-import Product2 from "../../../assets/images/product2.png";
-import Product3 from "../../../assets/images/product3.png";
-import Product5 from "../../../assets/images/product5.png";
 
 const BoxItem = () => {
   return (

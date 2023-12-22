@@ -19,7 +19,7 @@ const Root = () => {
       <Route path="/information" element={<Information />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/product/detailed/id" element={<Detail />} />
+      <Route path="/product/detailed/:id" element={<Detail />} />
       <Route path="*" element={<img src={Error404} alt="" />} />
     </Routes>
   );

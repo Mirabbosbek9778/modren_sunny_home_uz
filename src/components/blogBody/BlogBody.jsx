@@ -1,8 +1,8 @@
 import { Container, SmallText, Wrapper } from "../body/style";
 import { Medium, Small } from "../contacts/style";
 import { Text } from "../modal/style";
-import Blog1 from "../../assets/images/blog1.png";
 import { Whitetext } from "../generic/listCard/style";
+import { Blog1 } from "../../assets";
 
 const BlogBody = () => {
   return (
