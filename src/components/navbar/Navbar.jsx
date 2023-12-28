@@ -31,6 +31,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
       <Container>

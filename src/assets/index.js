@@ -54,8 +54,13 @@ import Youtube from "./icons/youFoot.svg";
 import Telegram from "./icons/telegFoot.svg";
 import Plus from "./icons/plus.svg";
 import UzbFlag from "./icons/uzb.png";
+import noimg from "./img/noimg.png";
+import News from "./images/new3.png";
 
 export {
+  News,
+  UzbFlag,
+  noimg,
   Plus,
   Facebook,
   Instagram,

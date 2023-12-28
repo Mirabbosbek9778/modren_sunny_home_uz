@@ -24,29 +24,29 @@ const AllImage = () => {
       <Container>
         <div className="cursor-pointer">
           <div className="flex gap-1">
-            <img src={AllIn1} alt="" />
-            <img src={AllIn2} alt="" />
-            <img src={AllIn3} alt="" />
-            <img src={AllIn4} alt="" />
+            <img src={AllIn1} alt="AllIn1" />
+            <img src={AllIn2} alt="AllIn1" />
+            <img src={AllIn3} alt="AllIn1" />
+            <img src={AllIn4} alt="AllIn1" />
           </div>
           <div className="flex gap-1">
-            <img src={AllIn5} alt="" />
-            <img src={AllIn6} alt="" />
-            <img src={AllIn7} alt="" />
-            <img src={AllIn8} alt="" />
+            <img src={AllIn5} alt="AllIn1" />
+            <img src={AllIn6} alt="AllIn1" />
+            <img src={AllIn7} alt="AllIn1" />
+            <img src={AllIn8} alt="AllIn1" />
           </div>
           <div className="flex gap-1">
-            <img src={AllIn9} alt="" />
-            <img src={AllIn10} alt="" />
-            <img src={AllIn11} alt="" />
-            <img src={AllIn12} alt="" />
+            <img src={AllIn9} alt="AllIn1" />
+            <img src={AllIn10} alt="AllIn1" />
+            <img src={AllIn11} alt="AllIn1" />
+            <img src={AllIn12} alt="AllIn1" />
           </div>
           <div className="flex gap-1">
-            <img src={AllIn13} alt="" />
-            <img src={AllIn14} alt="" />
-            <img src={AllIn15} alt="" />
+            <img src={AllIn13} alt="AllIn1" />
+            <img src={AllIn14} alt="AllIn1" />
+            <img src={AllIn15} alt="AllIn1" />
             <Card
-              description="Нажмите кнопку чтобы перейти на страницу “Все проекты”"
+              description="Нажмите кнопку чтобы перейти на страницу “Все проекты информации о наших дома”"
               title="Все проекты"
             />
           </div>

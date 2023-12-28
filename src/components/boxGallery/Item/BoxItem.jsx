@@ -1,412 +1,73 @@
-import { Product1, Product2, Product3, Product5 } from "../../../assets";
-import { Container, Wrapper } from "../../body/style";
-import { Texts } from "../../products/style";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+import { Plus, noimg } from "../../../assets";
+import { BoxImage, ButtonPlus, Texts } from "../../products/style";
+import { Container, ModalButton, ModalFooter } from "./style";
+import { Modal, Carousel } from "antd";
 
-const BoxItem = () => {
+const BoxItem = ({ data }) => {
+  const { img, subtitle, subtitle_en, subtitle_ru } = data;
+
+  const [open, setOpen] = useState(false);
+
+  const onChange = (currentSlide) => {
+    console.log(currentSlide);
+  };
+
   return (
-    <Wrapper>
+    <div className="w-[453px] h-[400px] flex">
       <Container>
-        <div className="flex flex-wrap gap-1">
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product1}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] "
-            />
-            <button className="absolute z-50 bottom-1 left-[325px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product2}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] bottom-1 left-[325px]"
-            />
-            <button className="absolute z-50 bottom-5 right-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product1}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] "
-            />
-            <button className="absolute z-50 bottom-1 left-[325px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product1}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] "
-            />
-            <button className="absolute z-50 bottom-1 left-[325px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product1}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] "
-            />
-            <button className="absolute z-50 bottom-1 left-[325px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product1}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] "
-            />
-            <button className="absolute z-50 bottom-1 left-[325px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product1}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] "
-            />
-            <button className="absolute z-50 bottom-1 left-[325px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product1}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] "
-            />
-            <button className="absolute z-50 bottom-1 left-[325px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product3}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] bottom-1 left-[325px]"
-            />
-            <button className="absolute z-50 bottom-5 right-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product5}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] bottom-1 left-[325px]"
-            />
-            <button className="absolute z-50 bottom-5 right-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product5}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] bottom-1 left-[325px]"
-            />
-            <button className="absolute z-50 bottom-5 right-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative">
-            <Texts>Проект (2+1) 70м2</Texts>
-            <img
-              src={Product3}
-              alt=""
-              className="rounded-[10px] w-[453px] h-[400px] bottom-1 left-[325px]"
-            />
-            <button className="absolute z-50 bottom-5 right-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="124"
-                viewBox="0 0 125 124"
-                fill="none"
-              >
-                <rect width="125" height="124" rx="28" fill="white" />
-                <path
-                  d="M81.79 61.2368H44.7529"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M63.2773 79.605V42.8643"
-                  stroke="#0E677C"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+        <Texts>{subtitle || "Название проекта или локация"}</Texts>
+        <BoxImage src={img || noimg} alt="icon" />
+        <ButtonPlus onClick={() => setOpen(true)}>
+          <img src={Plus} alt="Plus" />
+        </ButtonPlus>
+
+        <Modal
+          title=""
+          className="border bg-[#f0f2f4]"
+          centered
+          open={open}
+          onOk={() => setOpen(false)}
+          onCancel={() => setOpen(false)}
+          width={1480}
+          classNames={{ backgroundColor: "#f0f2f4" }}
+          footer={
+            <ModalFooter>
+              <h1>Галерея сборных домов</h1>
+              <div className="flex">
+                <ModalButton>Одноэтажные дома</ModalButton>
+                <ModalButton>Двухэтажные дома</ModalButton>
+                <ModalButton>Коммерчиские комплексы</ModalButton>
+              </div>
+            </ModalFooter>
+          }
+        >
+          <Carousel afterChange={onChange}>
+            <div className="pl-10 ">
+              <img src={img} alt="img" />
+            </div>
+            <div>
+              <img src={img} alt="img" />
+            </div>
+            <div>
+              <h3 style={contentStyle}>3</h3>
+            </div>
+          </Carousel>
+        </Modal>
       </Container>
-    </Wrapper>
+    </div>
   );
+};
+
+const contentStyle = {
+  margin: 0,
+  height: "160px",
+  color: "#fff",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#364d79",
 };
 
 export default BoxItem;

@@ -1,14 +1,18 @@
+/* eslint-disable react/prop-types */
+import { News } from "../../../assets";
 import { CardText, Con, Main, NewsCards } from "../../general/style";
 
 // eslint-disable-next-line react/prop-types
-const NewsCard = ({ title, icons, about }) => {
+const NewsCard = ({ data }) => {
+  const { subtitle, img } = data;
+
   return (
     <Con>
-      <Main >
-        <img src={icons} alt="" className="rounded-[20px]" />
+      <Main>
+        <img src={img && News} alt="News" className="rounded-[20px]" />
         <div className="relative z-10 flex flex-col gap-3 items-center justify-center pl-5">
-          <CardText>{title}</CardText>
-          <NewsCards>{about}</NewsCards>
+          <CardText>{subtitle || "whbsdbshhbdfshsffsjnh"}</CardText>
+          <NewsCards>{0 || "hehllo"}</NewsCards>
         </div>
       </Main>
     </Con>

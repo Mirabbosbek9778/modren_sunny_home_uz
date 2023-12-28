@@ -1,9 +1,23 @@
+// import { useEffect, useState } from "react";
 import { Container } from "../body/style";
 import { Medium, Small } from "../contacts/style";
 import QuesCard from "../generic/quesCard/QuesCard";
 import { Text, Wrapper } from "../modal/style";
+// import { Axios } from "axios";
 
 const AllInformation = () => {
+  // const [dataQues, setQuesCard] = useState([]);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const response = await Axios.get("https://api.mshome.uz/api/gallery/");
+  //       setQuesCard(response?.data);
+  //     } catch (error) {
+  //       console.error("There was a problem with the Axios request:", error);
+  //     }
+  //   };
+  //   getData();
+  // }, []);
   return (
     <Wrapper>
       <Container>
@@ -15,9 +29,12 @@ const AllInformation = () => {
             <Text>Популярные вопросы</Text>
           </div>
         </div>
+        {/* {dataQues.map((item) => ( */}
         <div>
           <QuesCard />
+          {/* data={item} */}
         </div>
+        {/* // ))} */}
       </Container>
     </Wrapper>
   );

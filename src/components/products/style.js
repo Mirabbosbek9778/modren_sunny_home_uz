@@ -13,4 +13,17 @@ const Texts = styled.div`
   width: 159px;
 `;
 
-export { Texts };
+const BoxImage = styled.img`
+  border-radius: 10px;
+  width: 453px;
+  height: 400px;
+`;
+
+const ButtonPlus = styled.button`
+  position: absolute;
+  bottom: 1px;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+`;
+export { Texts, BoxImage, ButtonPlus };
