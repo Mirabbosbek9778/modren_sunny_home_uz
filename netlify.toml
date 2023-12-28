@@ -1,1 +1,3 @@
-[[headers]] for = "/*" [headers.values]
+   for = "/*"
+   [headers.values]
+      Access-Control-Allow-Origin = "*"
