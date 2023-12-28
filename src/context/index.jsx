@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import Axios from "axios";
 import { useEffect, useState } from "react";
 import { CoinContext } from "./Coin";
