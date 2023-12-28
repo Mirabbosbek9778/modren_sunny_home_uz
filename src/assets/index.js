@@ -56,8 +56,14 @@ import Plus from "./icons/plus.svg";
 import UzbFlag from "./icons/uzb.png";
 import noimg from "./img/noimg.png";
 import News from "./images/new3.png";
+import Gift from "./icons/Gift.svg";
+import Secure from "./icons/secure.svg";
+import About from "./images/about.png";
 
 export {
+  About,
+  Secure,
+  Gift,
   News,
   UzbFlag,
   noimg,

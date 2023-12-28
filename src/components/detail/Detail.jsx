@@ -4,11 +4,11 @@ import { Container } from "../boxGallery/Item/style";
 import { Texts } from "../products/style";
 import { DetailImg } from "./styel";
 
-const Detail = ({ data }) => {
+const DetailComponent = ({ data, onclick }) => {
   const { img, subtitle } = data;
 
   return (
-    <div className="max:w-[681px] max:h-[400px] rounded-3xl">
+    <div className="max:w-[681px] max:h-[400px] rounded-3xl" onClick={onclick}>
       <Container>
         <Texts>{subtitle}</Texts>
         <DetailImg src={img} alt="icon" />
@@ -24,4 +24,4 @@ const Detail = ({ data }) => {
   );
 };
 
-export default Detail;
+export default DetailComponent;

@@ -30,6 +30,8 @@ const CardText = styled.div`
 const Con = styled.div`
   display: flex;
   gap: 3.5px;
+  justify-content: center;
+  background-color: #F0F2F4;
 `;
 
 const Main = styled.div`

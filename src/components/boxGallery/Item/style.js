@@ -22,6 +22,7 @@ const Wrap = styled.div`
 const ModalFooter = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 `;
 
 const ModalButton = styled.button`

@@ -1,4 +1,3 @@
-import Detail from "../../components/detail/Detail";
 import Gen from "../../components/general/gen/Gen";
 import NewsCard from "../../components/generic/newsCard/NewsCard";
 import Modal from "../../components/modal/Modal";
@@ -8,6 +7,7 @@ import TextProduct from "../../assets/text/TextProduct";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Box } from "../../components/detail/styel";
+import DetailComponent from "../../components/detail/Detail";
 
 const Product = () => {
   const navigate = useNavigate();
@@ -42,13 +42,15 @@ const Product = () => {
         name={"Продукты - Жилые комплексы"}
       />
       <Box>
-        {productCard.map((item) => (
-          <Detail
-            details="true"
-            onclick={() => navigate(`/product/detailed/${item?.id}`)}
-            key={item?.id}
-            data={item}
-          />
+        {productCard?.map((item) => (
+          <>
+            <DetailComponent
+              details="true"
+              onclick={() => navigate(`/product/detailed/${item?.id}`)}
+              key={item?.id}
+              data={item}
+            />
+          </>
         ))}
       </Box>
       <div className="flex flex-col">

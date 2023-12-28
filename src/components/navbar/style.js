@@ -28,9 +28,6 @@ const Text = styled.h1`
   font-weight: ${({ size }) => (size ? "700" : "6 00")};
   line-height: 100%;
   text-align: ${({ size }) => (size ? "right" : "")};
-  &:active {
-    color: #0e677c;
-  }
 `;
 
 const TextCont = styled.div`

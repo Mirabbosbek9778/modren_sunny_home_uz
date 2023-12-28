@@ -13,3 +13,11 @@
 .activeText {
   color: #0e677c;
 }
+.active > h1 {
+  color: #0e677c !important;
+}
+
+
+.top{
+  margin-top: -146px;
+}

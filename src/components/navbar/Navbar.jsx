@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo/Logo";
 import {
   Box,
@@ -31,6 +31,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const location = useLocation();
 
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
@@ -38,7 +39,15 @@ const Navbar = () => {
         <Logo />
         <Main>
           {navbarItem?.map((item) => (
-            <Link key={item?.id} to={`/${item?.path}`}>
+            <Link
+              key={item?.id}
+              to={`/${item?.path}`}
+              className={
+                location.pathname === `/${item?.path}`
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
               <Text>{item?.name}</Text>
             </Link>
           ))}
