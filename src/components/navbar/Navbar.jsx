@@ -11,10 +11,12 @@ import {
 } from "./style";
 import { navbarItem } from "../../mock/navbarItem";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [age, setAge] = useState("uz");
 
   const handleScroll = () => {
     const offset = navbarRef.current.getBoundingClientRect().top;
@@ -32,6 +34,19 @@ const Navbar = () => {
     };
   }, []);
   const location = useLocation();
+
+  const { i18n, t } = useTranslation();
+
+  const handleChange = (e) => {
+    switch (e) {
+      case 0:
+        return "Ru";
+      case 1:
+        return "Eng";
+      case 2:
+        return "Uz";
+    }
+  };
 
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
