@@ -12,7 +12,7 @@ const BoxItem = ({ data }) => {
   const [open, setOpen] = useState(false);
 
   const onChange = (currentSlide) => {
-    console.log(currentSlide);
+    // console.log(currentSlide);
   };
 
   return (
