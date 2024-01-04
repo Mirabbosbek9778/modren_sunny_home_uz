@@ -1,0 +1,21 @@
+.green-radius {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #44FF00;
+    animation: opacity 900ms linear infinite;
+}
+
+.nav-link{
+    font-weight: 500;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
