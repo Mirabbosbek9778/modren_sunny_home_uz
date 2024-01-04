@@ -9,7 +9,7 @@ const QuesCard = () => {
 
   return (
     <div className="flex flex-wrap gap-1">
-      {dataQues.map((item) => (
+      {dataQues?.map((item) => (
         <Box
           key={item?.id}
           items={item?.id}

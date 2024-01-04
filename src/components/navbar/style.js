@@ -4,7 +4,8 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 50px 8px 20px;
+
   border-bottom: 1px solid var(--Line-color, rgba(18, 16, 20, 0.05));
   background: var(--Background-BLUR, rgba(255, 255, 255, 0.4));
   backdrop-filter: blur(120.5999984741211px);
@@ -34,10 +35,10 @@ const TextCont = styled.div`
   color: #121014;
   text-align: right;
   font-family: Inter, sans-serif;
-  font-size: 14px;
-  font-style: normal;
+  font-size: 14px;  
+  font-style: normal; 
   font-weight: 500;
-  line-height: 100%;
+  line-height: 14px;
   display: flex;
 `;
 

@@ -9,7 +9,6 @@ const MainITem = () => {
           Design by:{" "}
           <Underline href="https://future-group.uz/">Future.agancy</Underline>
         </WhiteText>
-        <WhiteText>Animated icons by Lordicon.com</WhiteText>
       </Container>
     </Wrapper>
   );

@@ -1,5 +1,7 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo/Logo";
+import "./Style.scss"
+
 import {
   Box,
   Container,
@@ -31,7 +33,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const location = useLocation();
 
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
@@ -39,31 +40,18 @@ const Navbar = () => {
         <Logo />
         <Main>
           {navbarItem?.map((item) => (
-            <Link
+            <NavLink
               key={item?.id}
               to={`/${item?.path}`}
-              className={
-                location.pathname === `/${item?.path}`
-                  ? "nav-link active"
-                  : "nav-link"
-              }
             >
               <Text>{item?.name}</Text>
-            </Link>
+            </NavLink>
           ))}
         </Main>
         <Content>
           <Text size="true">+998 95 552 06 06</Text>
-          <Box>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="6"
-              height="6"
-              viewBox="0 0 6 6"
-              fill="none"
-            >
-              <circle cx="3" cy="3" r="3" fill="#44FF00" />
-            </svg>
+          <Box style={{marginTop: "6px"}}>
+              <div className="green-radius"></div>
             <TextCont>Мы на связи</TextCont>
           </Box>
         </Content>
