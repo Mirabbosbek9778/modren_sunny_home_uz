@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Button, P } from "../contacts/style";
-import { Con, Inputs, Parag, Text, Wrapper } from "./style";
+import { Con, InputTel, Inputs, Parag, Text, Wrapper } from "./style";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { PhoneInput } from "react-international-phone";
-import "react-international-phone/style.css";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const Modal = () => {
   const notify = () => toast("отправить запись ");
@@ -23,10 +23,9 @@ const Modal = () => {
         <div className="flex flex-col gap-3 items-center">
           <Inputs type="text" placeholder="Ваше имя" colur="true" />
           <PhoneInput
-            defaultCountry="uz"
-            value={phone}
-            onChange={(phone) => setPhone(phone)}
-            className="pl-5 pr-[470px] pb-4 pt-4  rounded-xl bg-[#f0f2f4]"
+            country={"uz"}
+            // value={this.state.phone}
+            onChange={(phone) => setPhone({ phone })}
           />
           <Inputs
             type="text"

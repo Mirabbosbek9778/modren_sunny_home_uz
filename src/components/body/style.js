@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: 74px 20px 150px 20px;
+  padding: 74px 20px 85.5px 10px;
   display: flex;
   justify-content: center;
   background-color: #f0f2f4;
@@ -71,7 +71,7 @@ const Image = styled.img`
 const Socialstyle = styled.div`
   background-color: #f0f2f4;
   display: flex;
-  width: 1440px;
+  width: 1336px;
   height: 119px;
   flex-shrink: 0;
   border-radius: 24px;

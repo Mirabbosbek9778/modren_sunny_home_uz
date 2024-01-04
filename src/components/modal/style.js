@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PhoneInput } from "react-international-phone";
 
 const Inputs = styled.input`
   display: flex;
@@ -48,7 +49,7 @@ const Wrapper = styled.div`
 `;
 
 const Con = styled.div`
-  max-width: 1440px;
+  max-width: 1336px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -58,4 +59,10 @@ const Con = styled.div`
   align-items: center;
   padding: 0 60px 0 60px;
 `;
-export { Inputs, Text, Parag, Wrapper, Con };
+const InputTel = styled(PhoneInput)`
+  width: 100%;
+  border: 1px solid red;
+  outline: none;
+  
+`;
+export { Inputs, Text, Parag, Wrapper, Con, InputTel };
