@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo/Logo";
 import "./Style.scss"
 
@@ -33,7 +33,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const location = useLocation();
 
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
@@ -41,17 +40,12 @@ const Navbar = () => {
         <Logo />
         <Main>
           {navbarItem?.map((item) => (
-            <Link
+            <NavLink
               key={item?.id}
               to={`/${item?.path}`}
-              className={
-                location.pathname === `/${item?.path}`
-                  ? "nav-link active"
-                  : "nav-link"
-              }
             >
               <Text>{item?.name}</Text>
-            </Link>
+            </NavLink>
           ))}
         </Main>
         <Content>
