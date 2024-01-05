@@ -4,7 +4,7 @@ import { PhoneInput } from "react-international-phone";
 const Inputs = styled.input`
   display: flex;
   height: 60px;
-  padding: 21px 470px 20px 16px;
+  /* padding: 21px 470px 20px 16px; */
   align-items: center;
   align-self: stretch;
   border-radius: 12px;

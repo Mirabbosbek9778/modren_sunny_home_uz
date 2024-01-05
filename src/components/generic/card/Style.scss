@@ -1,0 +1,44 @@
+
+
+
+.card-btn {
+    border: 2px solid;
+    width: 80px;
+    height: 80px;
+    background: #FFFFFF;
+    border: 4px solid green;
+    border-radius: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0E677C;
+    color: #0E677C;
+    font-size: 67px;
+    font-weight: 300;
+    
+    .plus-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    
+    .plus-card-hover{
+        &:hover{
+            transform: rotate(-90deg);
+            transition: 500ms;
+        }
+    }
+}
+
+.card-btn-hover{
+    &:hover{
+        transform: scale(85%);
+        transition: 700ms;
+    }
+}   
