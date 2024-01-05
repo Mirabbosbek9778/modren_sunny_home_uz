@@ -48,8 +48,13 @@ export const GlobalProvider = ({ children }) => {
     getData();
   }, []);
 
+  const value = {
+    productCard, newCard, dataGallery, isLoading
+  }
+
   return (
     <CoinContext.Provider
+      value={value}
       value={{
         productCard,
         newCard,
