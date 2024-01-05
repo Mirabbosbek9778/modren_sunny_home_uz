@@ -51,11 +51,11 @@ const Inputs = styled.input`
 
 const Button = styled.button`
   display: flex;
-  width: 339px;
+  width: 139px;
   height: 68px;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   background: var(--Primary-Default, #0e677c);
   color: var(--BTN-text, #fff);
   text-align: center;
@@ -73,7 +73,7 @@ const P = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 210px;
+  width: 225px;
   display: flex;
   flex-wrap: wrap;
   height: 51px;
