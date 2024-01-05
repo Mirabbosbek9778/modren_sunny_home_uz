@@ -27,7 +27,7 @@ const Modal = () => {
             // value={this.state.phone}
             onChange={(phone) => setPhone({ phone })}
           />
-          <Inputs
+          <Inputs required
             type="text"
             placeholder="Комментарий или вопрос"
             className="h-[124px]"
