@@ -3,8 +3,11 @@ import Logo from "../../assets/logo/Logo";
 import { Container, TextSocial, Wrapper } from "../body/style";
 import { Bold, Box, Small } from "../contacts/style";
 import { Facebook, Instagram, Telegram, Youtube } from "../../assets";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper className="bg-custom-background">
       <Container>
@@ -15,27 +18,27 @@ const Footer = () => {
           <div className="flex gap-20">
             <div className="flex flex-col gap-4">
               <TextSocial>
-                <Link to="/about">О нас</Link>
+                <Link to="/about">{t("body_item_title")}</Link>
               </TextSocial>
               <TextSocial>
-                <Link to="/gallery">Галерея</Link>
+                <Link to="/gallery">{t("gallery")}</Link>
               </TextSocial>
               <TextSocial>
-                <Link to="/contact">Контакты</Link>
+                <Link to="/contact">{t("contact")}</Link>
               </TextSocial>
             </div>
             <div className="flex flex-col gap-4">
-              <TextSocial colur="true">Продукты</TextSocial>
+              <TextSocial colur="true">{t("products")}</TextSocial>
               <TextSocial>
-                <Link to="/product">Жилые комплексы</Link>
+                <Link to="/product">{t("footer_1")}</Link>
               </TextSocial>
-              <TextSocial>Коммерческие комплексы</TextSocial>
+              <TextSocial>{t("footer_2")}</TextSocial>
             </div>
             <div className="flex flex-col gap-4">
-              <TextSocial colur="true">Общая информация</TextSocial>
-              <TextSocial>Используемое сырье</TextSocial>
+              <TextSocial colur="true">{t("all_infromation")}</TextSocial>
+              <TextSocial>{t("footer_3")}</TextSocial>
               <TextSocial>
-                <Link to="/information">FAQ</Link>
+                <Link to="/information">{t("footer_4")}</Link>
               </TextSocial>
             </div>
             <div className="flex flex-col gap-4">
@@ -48,17 +51,12 @@ const Footer = () => {
         <div className="flex justify-between">
           <div className="flex items-center gap-[53px]">
             <Small className="flex flex-col gap-2">
-              Головной офис:{" "}
-              <Bold className="w-[253px]">
-                г. Ташкент, Яккасарайский р-н, ул. Имом Ат-Термизий, 52
-              </Bold>
+              {t("location_1")}{" "}
+              <Bold className="w-[253px]">{t("location_2")}</Bold>
             </Small>
             <Small className="flex flex-col gap-2">
-              Производственный комплекс:
-              <Bold className="w-[320px]">
-                Андижанская область, Кургантепинский р-н, Чорвадор МСГ, ул.
-                Чигатой, 72-B
-              </Bold>
+              {t("location_3")}{" "}
+              <Bold className="w-[320px]">{t("location_4")}</Bold>
             </Small>
           </div>
           <div className="flex items-center gap-2">
