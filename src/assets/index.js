@@ -59,8 +59,16 @@ import News from "./images/new3.png";
 import Gift from "./icons/Gift.svg";
 import Secure from "./icons/secure.svg";
 import About from "./images/about.png";
+import FaceMain from "./icons/facebook.svg";
+import InstaMain from "./icons/instagram.svg";
+import YouMain from "./icons/youtube.svg";
+import LinkedMain from "./icons/linkedin.svg";
 
 export {
+  FaceMain,
+  InstaMain,
+  LinkedMain,
+  YouMain,
   About,
   Secure,
   Gift,

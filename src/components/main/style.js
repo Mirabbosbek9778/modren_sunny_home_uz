@@ -25,9 +25,9 @@ const LanguageText = styled.div`
   color: ${({ colur }) => (colur ? "#FFF" : "#fff")};
   font-weight: ${({ colur }) => (colur ? "400" : "600")};
   opacity: ${({ colur }) => (colur ? "0.3" : "")};
-  &:hover {
+  /* &:hover {
     color: white;
-  }
+  } */
 `;
 
 const Content = styled.div`
