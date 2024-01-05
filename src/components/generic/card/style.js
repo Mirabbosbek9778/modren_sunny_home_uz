@@ -20,7 +20,7 @@ const Text = styled.div`
   font-family: Inter, sans-serif;
   font-style: normal;
   line-height: ${({ size }) => (size ? "21px" : "")};
-  font-weight: ${({ size }) => (size ? "500" : "700")};
+  font-weight: ${({ size }) => (size ? "700" : "500")};
   font-size: ${({ size }) => (size ? "20px" : "16px")};
   width: ${({ size }) => (size ? "238px" : "280px")};
 `;
@@ -28,7 +28,7 @@ const Text = styled.div`
 const Input = styled.input`
   display: flex;
   height: ${({ size }) => (size ? "124px" : "60px")};
-  padding: 21px 470px 20px 16px;
+  padding: 21px 70px 20px 16px;
   width: 563px;
   align-items: center;
   align-self: stretch;
@@ -58,7 +58,7 @@ const ModalButton = styled.button`
   display: flex;
   width: 339px;
   height: 60px;
-  padding: 21px 0px 20px 0px;
+  /* padding: 21px 0px 20px 0px; */
   justify-content: center;
   align-items: center;
   border-radius: 12px;
