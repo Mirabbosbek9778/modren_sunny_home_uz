@@ -3,29 +3,25 @@ import { Container, Input, Main, ModalButton, ModalText, Text } from "./style";
 import { useState } from "react";
 import { Modal } from "antd";
 import { P } from "../../contacts/style";
-import { Plus } from "../../../assets";
-import "./Style.scss"
+import "./Style.scss";
 import { useTranslation } from "react-i18next";
 
 const Card = () => {
   const [open, setOpen] = useState(false);
   const [formSubmitted] = useState(false);
 
-  const [btnRotate, setBtnRotate] = useState(false)
-  const [btnScale, setBtnScale] = useState(false)
+  const [, setBtnRotate] = useState(false);
+  const [btnScale, setBtnScale] = useState(false);
 
   const onBtn = () => {
-    setBtnRotate(true)
-    setBtnScale(true)
-  }
+    setBtnRotate(true);
+    setBtnScale(true);
+  };
 
   const offBtn = () => {
-    setBtnRotate(false)
-    setBtnScale(false)
-
-
-  }
-
+    setBtnRotate(false);
+    setBtnScale(false);
+  };
 
   const closeModal = () => {
     if (!formSubmitted) {
@@ -37,24 +33,34 @@ const Card = () => {
   return (
     <Container>
       <Main>
-        <Text style={{ marginBottom: "10px" }}>{props?.description}</Text>
+        <Text style={{ marginBottom: "10px" }}></Text>
         <Text>{t("card_about")}</Text>
         <div className="flex items-center">
           <Text className="w-[238px]" size="true">
             {t("card_title")}
           </Text>
           <div>
-
             <div
               onClick={() => setOpen(true)}
-              style={!btnScale ? { transform: "scale(100%)", transition: "700ms" } : { transform: "scale(85%)", transition: "500ms" }}
+              style={
+                !btnScale
+                  ? { transform: "scale(100%)", transition: "700ms" }
+                  : { transform: "scale(85%)", transition: "500ms" }
+              }
               className="card-btn outline-none flex border-none pt-[10px]"
-              onMouseOut={() => offBtn()} onMouseOver={() => onBtn()}
+              onMouseOut={() => offBtn()}
+              onMouseOver={() => onBtn()}
             >
               <div
-                style={!btnScale ? { transform: "rotate(90deg)", transition: "700ms" } : { transform: "rotate(-90deg)", transition: "500ms" }}
-                onMouseOut={() => offBtn()} onMouseOver={() => onBtn()}
-                className="plus-card">
+                style={
+                  !btnScale
+                    ? { transform: "rotate(90deg)", transition: "700ms" }
+                    : { transform: "rotate(-90deg)", transition: "500ms" }
+                }
+                onMouseOut={() => offBtn()}
+                onMouseOver={() => onBtn()}
+                className="plus-card"
+              >
                 +
               </div>
             </div>
