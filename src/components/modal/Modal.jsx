@@ -1,30 +1,29 @@
 import { useState } from "react";
 import { Button, P } from "../contacts/style";
-import { Con, InputTel, Inputs, Parag, Text, Wrapper } from "./style";
+import { Con, Inputs, Parag, Text, Wrapper } from "./style";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useTranslation } from "react-i18next";
 
 const Modal = () => {
   const notify = () => toast("отправить запись ");
-  const [phone, setPhone] = useState("");
+  const [, setPhone] = useState("");
+
+  const { t } = useTranslation();
 
   return (
     <Wrapper>
       <Con>
         <div className="flex flex-col items-center justify-center">
-          <Text>Заказать обратный звонок</Text>
-          <Parag>
-            Заполните форму, и мы с радостью проконсультируем вас и поможем
-            сделать выбор.
-          </Parag>
+          <Text>{t("modal_title")}</Text>
+          <Parag>{t("modal_about")}</Parag>
         </div>
         <div className="flex flex-col gap-3 items-center">
           <Inputs type="text" placeholder="Ваше имя" colur="true" />
           <PhoneInput
             country={"uz"}
-            // value={this.state.phone}
             onChange={(phone) => setPhone({ phone })}
           />
           <Inputs required
@@ -36,12 +35,10 @@ const Modal = () => {
           />
           <div className="flex items-center gap-3 w-full">
             <P>
-              Нажимая на кнопку «Отправить» вы соглашаетесьс{" "}
-              <P under="true">
-                политикой {"  "} <P under="true">конфиденциальности</P>
-              </P>
+              {t("modaL_content")}
+              <P under="true">{t("modaL_content_underline")}</P>
             </P>
-            <Button onClick={notify}>Отправить</Button>
+            <Button onClick={notify}>{t("modal_button")}</Button>
             <ToastContainer />
           </div>
         </div>

@@ -1,19 +1,18 @@
 import { H1Text, ONas, PText, Wrapper } from "../style";
 import { House1, House2, House3, House4, House5 } from "../../../assets";
 import Card from "../../generic/card/Card";
+import { useTranslation } from "react-i18next";
 
 const BodyItem = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper className="bg-[#f0f2f4] flex justify-center">
       <div className="flex items-center gap-8">
         <div className="flex flex-col gap-6">
-          <ONas>О нас</ONas>
-          <H1Text>Строим современные и экологичные дома от 7 дней</H1Text>
-          <PText>
-            - Наша компания специализируется на производстве и строительстве
-            модульных домов легкой инструкции, доступных по цене и производимые
-            в короткие сроки.
-          </PText>
+          <ONas>{t("body_item_title")}</ONas>
+          <H1Text>{t("body_item_about")}</H1Text>
+          <PText>{t("body_item_description")}</PText>
         </div>
         <div className="flex flex-wrap w-[746px] gap-1">
           <img src={House1} alt="House1" />
