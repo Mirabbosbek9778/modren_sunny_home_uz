@@ -1,5 +1,7 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../../assets/logo/Logo";
+import "./Style.scss";
+
 import {
   Box,
   Container,
@@ -9,12 +11,13 @@ import {
   TextCont,
   Wrapper,
 } from "./style";
-import { navbarItem } from "../../mock/navbarItem";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation();
 
   const handleScroll = () => {
     const offset = navbarRef.current.getBoundingClientRect().top;
@@ -31,40 +34,36 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const location = useLocation();
 
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
       <Container>
         <Logo />
         <Main>
-          {navbarItem?.map((item) => (
-            <Link
-              key={item?.id}
-              to={`/${item?.path}`}
-              className={
-                location.pathname === `/${item?.path}`
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              <Text>{item?.name}</Text>
-            </Link>
-          ))}
+          <NavLink to="/about">
+            <Text>{t("about")}</Text>
+          </NavLink>
+          <NavLink to="/product">
+            <Text>{t("products")}</Text>
+          </NavLink>
+          <NavLink to="/gallery">
+            <Text>{t("gallery")}</Text>
+          </NavLink>
+          <NavLink to="/information">
+            <Text>{t("all_infromation")}</Text>
+          </NavLink>
+          <NavLink to="/blog">
+            <Text>{t("blog")}</Text>
+          </NavLink>
+          <NavLink to="/contact">
+            <Text>{t("contact")}</Text>
+          </NavLink>
         </Main>
         <Content>
-          <Text size="true">+998 95 552 06 06</Text>
-          <Box>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="6"
-              height="6"
-              viewBox="0 0 6 6"
-              fill="none"
-            >
-              <circle cx="3" cy="3" r="3" fill="#44FF00" />
-            </svg>
-            <TextCont>Мы на связи</TextCont>
+          <Text size="true">{t("number")}</Text>
+          <Box style={{ marginTop: "6px" }}>
+            <div className="green-radius w-[6px] h-[6px]"></div>
+            <TextCont>{t("set")}</TextCont>
           </Box>
         </Content>
       </Container>

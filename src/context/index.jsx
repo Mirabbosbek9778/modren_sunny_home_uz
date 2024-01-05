@@ -4,13 +4,13 @@
 import Axios from "axios";
 import { useEffect, useState } from "react";
 import { CoinContext } from "./Coin";
-import { useParams } from "react-router-dom";
 
 export const GlobalProvider = ({ children }) => {
   const [productCard, setProductCard] = useState([]);
   const [newCard, setNewsCard] = useState([]);
   const [dataGallery, setDataGallery] = useState([]);
   const [isLoading, setisLoading] = useState(true);
+  const [dataLanguage, setLanguage] = useState([]);
 
   useEffect(() => {
     // product api
@@ -44,6 +44,15 @@ export const GlobalProvider = ({ children }) => {
       }
     };
 
+    // get Language api
+    const getLanguage = () => {
+      fetch("https://api.mshome.uz/api/params/4/")
+        .then((response) => response.json())
+        .then((data) => setLanguage(data))
+        .catch((error) => console.error("Error fetching data:", error));
+    };
+
+    getLanguage();
     getNews();
     getGallery();
     getData();
@@ -51,7 +60,14 @@ export const GlobalProvider = ({ children }) => {
 
   return (
     <CoinContext.Provider
-      value={{ productCard, newCard, dataGallery, isLoading }}
+      value={{
+        productCard,
+        newCard,
+        dataGallery,
+        isLoading,
+        dataLanguage,
+        setLanguage,
+      }}
     >
       {children}
     </CoinContext.Provider>

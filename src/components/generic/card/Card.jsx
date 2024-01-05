@@ -4,8 +4,9 @@ import { useState } from "react";
 import { Modal } from "antd";
 import { P } from "../../contacts/style";
 import { Plus } from "../../../assets";
+import { useTranslation } from "react-i18next";
 
-const Card = (props) => {
+const Card = () => {
   const [open, setOpen] = useState(false);
   const [formSubmitted] = useState(false);
 
@@ -14,14 +15,15 @@ const Card = (props) => {
       setOpen(false);
     }
   };
+  const { t } = useTranslation();
 
   return (
     <Container>
       <Main>
-        <Text>{props?.description}</Text>
+        <Text>{t("card_about")}</Text>
         <div className="flex items-center">
           <Text className="w-[238px]" size="true">
-            {props?.title}
+            {t("card_title")}
           </Text>
           <div>
             <div
