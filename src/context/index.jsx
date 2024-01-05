@@ -10,7 +10,6 @@ export const GlobalProvider = ({ children }) => {
   const [newCard, setNewsCard] = useState([]);
   const [dataGallery, setDataGallery] = useState([]);
   const [isLoading, setisLoading] = useState(true);
-  const [dataLanguage, setLanguage] = useState([]);
 
   useEffect(() => {
     // product api
@@ -44,15 +43,6 @@ export const GlobalProvider = ({ children }) => {
       }
     };
 
-    // get Language api
-    const getLanguage = () => {
-      fetch("https://api.mshome.uz/api/params/4/")
-        .then((response) => response.json())
-        .then((data) => setLanguage(data))
-        .catch((error) => console.error("Error fetching data:", error));
-    };
-
-    getLanguage();
     getNews();
     getGallery();
     getData();
@@ -65,8 +55,6 @@ export const GlobalProvider = ({ children }) => {
         newCard,
         dataGallery,
         isLoading,
-        dataLanguage,
-        setLanguage,
       }}
     >
       {children}
