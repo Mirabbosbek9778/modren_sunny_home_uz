@@ -1,18 +1,18 @@
 import { BigText, Box, Container, Content, SmallText, Wrapper } from "./style";
 import Card from "../generic/card/Card";
 import { dataBody } from "../../mock/dataBody";
+import { useTranslation } from "react-i18next";
 
 const Body = () => {
+  const { t } = useTranslation();
+  console.log(t("body_about"));
+
   return (
     <Wrapper>
       <Container>
         <Content>
-          <BigText>MODERN SUNNY HOME</BigText>
-          <SmallText>
-            Приобретая наш дом, вы получаете не только готовое жилье, но и
-            спокойствие, зная, что ваш дом соответствует высочайшим стандартам
-            качества и безопасности.
-          </SmallText>
+          <BigText>{t("body_about")}</BigText>
+          <SmallText>{t("body_description")}</SmallText>
         </Content>
         <Box>
           <Card

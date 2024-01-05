@@ -4,7 +4,6 @@
 import Axios from "axios";
 import { useEffect, useState } from "react";
 import { CoinContext } from "./Coin";
-import { useParams } from "react-router-dom";
 
 export const GlobalProvider = ({ children }) => {
   const [productCard, setProductCard] = useState([]);
@@ -56,6 +55,12 @@ export const GlobalProvider = ({ children }) => {
   return (
     <CoinContext.Provider
       value={value}
+      value={{
+        productCard,
+        newCard,
+        dataGallery,
+        isLoading,
+      }}
     >
       {children}
     </CoinContext.Provider>

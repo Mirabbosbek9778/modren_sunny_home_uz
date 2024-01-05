@@ -13,18 +13,18 @@ import {
   FootImg7,
   FootImg8,
 } from "../../assets";
+import { useTranslation } from "react-i18next";
 
 const Xonsulting = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper>
       <Container>
         <div className="flex flex-col gap-6">
-          <ONas>Консультация</ONas>
-          <Text>Если у вас появились вопросы, запишитесь на консультацию</Text>
-          <HidenText className="w-[415px]">
-            Наши сотрудники позвонят вам в течение 48 часов и ответят на все
-            ваши вопросы
-          </HidenText>
+          <ONas>{t("xonsolting_title")}</ONas>
+          <Text>{t("xonsolting_about")}</Text>
+          <HidenText className="w-[415px]">{t("xonsolting_ques")}</HidenText>
         </div>
         <div className="flex flex-wrap gap-[5px]">
           <div className="flex w-full justify-end pr-14 gap-1">

@@ -1,19 +1,21 @@
-/* eslint-disable react/prop-types */
+import { useTranslation } from "react-i18next";
 import { ONas } from "../../body/style";
 import { HidenText } from "../../generic/cards/style";
 import { Text } from "../../modal/style";
 import { Container, Wrapper } from "../style";
 
-const Gen = (props) => {
+const Gen = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper>
       <Container>
         <div className="flex justify-between items-center">
           <div>
-            <ONas>{props?.about}</ONas>
-            <Text>{props?.title}</Text>
+            <ONas>{t("gen_title")}</ONas>
+            <Text>{t("gen_about")}</Text>
           </div>
-          <HidenText>{props?.description}</HidenText>
+          <HidenText>{t("gen_description")}</HidenText>
         </div>
       </Container>
     </Wrapper>

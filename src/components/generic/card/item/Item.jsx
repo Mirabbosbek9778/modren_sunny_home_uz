@@ -1,48 +1,28 @@
-/* eslint-disable react/prop-types */
 import { Container, Input, Main, ModalButton, ModalText, Text } from "../style";
 import { useState } from "react";
 import { Modal } from "antd";
 import { P } from "../../../contacts/style";
+import { Plus } from "../../../../assets";
+import { useTranslation } from "react-i18next";
 
-const Item = (props) => {
+const Item = () => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <Container size="true">
       <Main>
-        <Text>{props?.description}</Text>
+        <Text>{t("item_description")}</Text>
         <div className="flex items-center justify-between">
           <Text className="w-[238px]" size="true">
-            {props?.title}
+            {t("item_title")}
           </Text>
           <div>
             <div
               onClick={() => setOpen(true)}
               className="border-none outline-none pt-[85px] pr-[1px]"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="80"
-                viewBox="0 0 80 80"
-                fill="none"
-              >
-                <rect width="80" height="80" rx="19" fill="white" />
-                <path
-                  d="M52.3458 39.5076H28.6421"
-                  stroke="#0E677C"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M40.4976 51.358V27.6543"
-                  stroke="#0E677C"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <img src={Plus} alt="Plus" />
             </div>
             <Modal
               centered
@@ -71,12 +51,9 @@ const Item = (props) => {
                     size="true"
                   />
                   <div className="flex items-center">
-                    <P>
-                      Нажимая на кнопку «Отправить» вы соглашаетесьс политикой
-                      конфиденциальности
-                    </P>
+                    <P>{t("item_modal_title")}</P>
                     <ModalButton onClick={() => setOpen(false)}>
-                      Отправить
+                      {t("modal_button")}
                     </ModalButton>
                   </div>
                 </div>
