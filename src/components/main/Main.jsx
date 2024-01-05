@@ -3,12 +3,12 @@ import Facebook from "../../assets/icons/facebook.svg";
 import Instagram from "../../assets/icons/instagram.svg";
 import Youtube from "../../assets/icons/youtube.svg";
 import Linkedin from "../../assets/icons/linkedin.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+
 const Main = () => {
+  const [, setAge] = useState("uz");
   const [selectedLanguage, setSelectedLanguage] = useState("ru");
-  const [age, setAge] = useState("Ru");
-  const [dataLanguage, setLanguage] = useState([]);
 
   const handleLanguageClick = (lang) => {
     setSelectedLanguage(lang);
@@ -25,48 +25,13 @@ const Main = () => {
       case 2:
         return "uz";
     }
-
-    setAge(e?.target?.value);
-    changeLanguage(e?.target?.value);
-    setLanguage(setAge);
+    setAge(e);
+    changeLanguage(e);
   };
 
   const changeLanguage = (lan) => {
     i18n.changeLanguage(lan);
   };
-
-  // console.log(age);
-
-  // const [data, setData] = useState({});
-  // const [currentLang, setCurrentLang] = useState("ru");
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, [currentLang]);
-
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await fetch("https://api.mshome.uz/api/params/4/");
-  //     const result = await response.json();
-  //     setData(result);
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error);
-  //   }
-  // };
-
-  // const getContentByLang = () => {
-  //   switch (currentLang) {
-  //     case "uz":
-  //       return data?.val_uz;
-  //     case "ru":
-  //       return data?.val_ru;
-  //     case "en":
-  //       return data?.val_en;
-  //     default:
-  //       return data?.val_uz;
-  //   }
-  // };
-  // console.log(currentLang);
 
   return (
     <Wrapper>
@@ -109,3 +74,36 @@ const Main = () => {
 };
 
 export default Main;
+
+// console.log(age);
+
+// const [data, setData] = useState({});
+// const [currentLang, setCurrentLang] = useState("ru");
+
+// useEffect(() => {
+//   fetchData();
+// }, [currentLang]);
+
+// const fetchData = async () => {
+//   try {
+//     const response = await fetch("https://api.mshome.uz/api/params/4/");
+//     const result = await response.json();
+//     setData(result);
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//   }
+// };
+
+// const getContentByLang = () => {
+//   switch (currentLang) {
+//     case "uz":
+//       return data?.val_uz;
+//     case "ru":
+//       return data?.val_ru;
+//     case "en":
+//       return data?.val_en;
+//     default:
+//       return data?.val_uz;
+//   }
+// };
+// console.log(currentLang);

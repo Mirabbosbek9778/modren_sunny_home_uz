@@ -12,14 +12,11 @@ import {
   Wrapper,
 } from "./style";
 import { useEffect, useRef, useState } from "react";
-// import { useGlobalContext } from "../../context/Coin";
-import { initReactI18next, useTranslation } from "react-i18next";
-import i18n from "../../i18n";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  // const { dataLanguage } = useGlobalContext();
   const { t } = useTranslation();
 
   const handleScroll = () => {
@@ -37,10 +34,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
- 
-
-
-  console.log(translations);
 
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
@@ -51,26 +44,26 @@ const Navbar = () => {
             <Text>{t("about")}</Text>
           </NavLink>
           <NavLink to="/product">
-            <Text>Продукты</Text>
+            <Text>{t("products")}</Text>
           </NavLink>
           <NavLink to="/gallery">
-            <Text>Галерея</Text>
+            <Text>{t("gallery")}</Text>
           </NavLink>
           <NavLink to="/information">
-            <Text>Общая информация</Text>
+            <Text>{t("all_infromation")}</Text>
           </NavLink>
           <NavLink to="/blog">
-            <Text>Блог</Text>
+            <Text>{t("blog")}</Text>
           </NavLink>
           <NavLink to="/contact">
-            <Text>Контакты</Text>
+            <Text>{t("contact")}</Text>
           </NavLink>
         </Main>
         <Content>
-          <Text size="true">+998 95 552 06 06</Text>
+          <Text size="true">{t("number")}</Text>
           <Box style={{ marginTop: "6px" }}>
             <div className="green-radius w-[6px] h-[6px]"></div>
-            <TextCont>Мы на связи</TextCont>
+            <TextCont>{t("set")}</TextCont>
           </Box>
         </Content>
       </Container>
