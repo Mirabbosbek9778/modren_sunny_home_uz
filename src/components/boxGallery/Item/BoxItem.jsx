@@ -5,15 +5,17 @@ import { Plus, noimg } from "../../../assets";
 import { BoxImage, ButtonPlus, Texts } from "../../products/style";
 import { Container, ModalButton, ModalFooter } from "./style";
 import { Modal, Carousel } from "antd";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const BoxItem = ({ data }) => {
   const { img, subtitle, subtitle_en, subtitle_ru } = data;
 
   const [open, setOpen] = useState(false);
 
-  const onChange = (currentSlide) => {
-    // console.log(currentSlide);
-  };
+  const onChange = (currentSlide) => {};
+
+  const { t } = useTranslation;
 
   return (
     <div className="w-[453px] h-[400px] flex">
@@ -24,7 +26,6 @@ const BoxItem = ({ data }) => {
           <img src={Plus} alt="Plus" />
         </ButtonPlus>
         <Modal
-          title=""
           className="border bg-[rgba(107, 104, 109, 0.7)] bg-opacity-5 "
           centered
           open={open}
@@ -42,10 +43,10 @@ const BoxItem = ({ data }) => {
                     location.pathname === "/" ? "nav-link active" : "nav-link"
                   }
                 >
-                  Одноэтажные дома
+                  {t("gallery_title1")}
                 </ModalButton>
-                <ModalButton>Двухэтажные дома</ModalButton>
-                <ModalButton>Коммерчиские комплексы</ModalButton>
+                <ModalButton>{t("gallery_title2")}</ModalButton>
+                <ModalButton>{t("footer_2")}</ModalButton>
               </div>
             </ModalFooter>
           }
@@ -54,8 +55,9 @@ const BoxItem = ({ data }) => {
             <div className="pl-10 ">
               <img src={img} alt="img" className="opacity-100" />
             </div>
-            <img src={img} alt="img" />
-            <div></div>
+            <div>
+              <img src={img} alt="img" />
+            </div>
           </Carousel>
         </Modal>
       </Container>

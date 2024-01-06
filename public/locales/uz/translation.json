@@ -63,9 +63,11 @@
   "location_3": "Ishlab chiqarish kompleksi:",
   "location_4": "Andijon viloyati Qorg'ontepa",
 
- "boxGalleryTitle": "Asosiy" ,
+  "boxGalleryTitle": "Asosiy",
 
   "plus_modal_title": "Bizning Hodimlarimiz sizga 48 soat ichida bog'lanishadi",
-  "plus_modal_text": "Jonatish tugamisni bosing kompleksi"
+  "plus_modal_text": "Jonatish tugamisni bosing kompleksi",
 
+  "gallery_title2": "Ikki etajli uy",
+  "gallery_title1": "Bir Etajli uy"
 }
