@@ -7,12 +7,21 @@ import { Container, ModalButton, ModalFooter } from "./style";
 import { Modal, Carousel } from "antd";
 
 const BoxItem = ({ data }) => {
-  const { img, subtitle, subtitle_en, subtitle_ru } = data;
+  const { img, subtitle } = data;
 
   const [open, setOpen] = useState(false);
 
   const onChange = (currentSlide) => {
     // console.log(currentSlide);
+  };
+
+  const onMove = ({
+    target: {
+      dataset: { name },
+    },
+  }) => {
+    if (name === "right") slider.current.next();
+    if (name === "left") slider.current.prev();
   };
 
   return (
@@ -23,6 +32,7 @@ const BoxItem = ({ data }) => {
         <ButtonPlus onClick={() => setOpen(true)}>
           <img src={Plus} alt="Plus" />
         </ButtonPlus>
+
         <Modal
           title=""
           className="border bg-[rgba(107, 104, 109, 0.7)] bg-opacity-5 "
@@ -55,7 +65,7 @@ const BoxItem = ({ data }) => {
               <img src={img} alt="img" className="opacity-100" />
             </div>
             <img src={img} alt="img" />
-            <div></div>
+            <div>{"Otabek"}</div>
           </Carousel>
         </Modal>
       </Container>
