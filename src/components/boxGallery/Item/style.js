@@ -39,6 +39,7 @@ const ModalButton = styled.button`
   line-height: normal;
   border-radius: 100px;
   background: var(--Bg-Secondary, #fff);
+
   &:hover {
     background: var(--Primary-Default, #0e677c);
   }

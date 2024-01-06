@@ -25,21 +25,27 @@ const Products = () => {
             <Texts>{t("product_size")}</Texts>
             <img src={Product1} alt="" className="rounded-[30px]" />
             <button className="absolute z-50 bottom-5 right-4">
-              <img src={Plus} alt="Plus" />
+              <a href="/product">
+                <img src={Plus} alt="Plus" />
+              </a>
             </button>
           </div>
           <div className="relative">
             <Texts>{t("product_size")}</Texts>
             <img src={Product2} alt="" className="rounded-[30px]" />
             <button className="absolute z-50 bottom-5 right-4">
-              <img src={Plus} alt="Plus" />
+              <a href="/product">
+                <img src={Plus} alt="Plus" />
+              </a>
             </button>
           </div>
           <div className="relative">
             <Texts>{t("product_size")}</Texts>
             <img src={Product3} alt="" className="rounded-[30px]" />
             <button className="absolute z-50 bottom-5 right-4">
-              <img src={Plus} alt="Plus" />
+              <a href="/product">
+                <img src={Plus} alt="Plus" />
+              </a>
             </button>
           </div>
           <div className="flex items-center gap-2">
@@ -55,7 +61,7 @@ const Products = () => {
               <Texts>{t("product_size")}</Texts>
               <img
                 src={Product5}
-                alt=""
+                alt="Product5"
                 className="w-[452.5px] h-[249px] rounded-[24px]"
               />
             </div>

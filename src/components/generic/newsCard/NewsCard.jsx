@@ -1,21 +1,19 @@
 /* eslint-disable react/prop-types */
-import { News, Plus } from "../../../assets";
-import { CardText, Con, Main, NewsCards } from "../../general/style";
+import { News } from "../../../assets";
+import { Con, Main } from "../../general/style";
 
-// eslint-disable-next-line react/prop-types, no-unused-vars
 const NewsCard = ({ data }) => {
-  // const { subtitle, img } = data;
+  const { img, description, title } = data;
 
   return (
     <Con>
-      <Main className="border">
-        <img src={News} alt="News" className="rounded-[20px]" />
-        <div className="relative z-10 flex flex-col gap-3 items-center justify-center pl-5">
-          <CardText>{"whbsdbshhbdfshsffsjnh"}</CardText>
-          <div className="flex items-center">
-            <NewsCards>{0 || "hehllo"}</NewsCards>
-            <img src={Plus} alt="" />
-          </div>
+      <Main>
+        <img src={!img || News} alt="News" className="rounded-[20px]" />
+        <div className="w-[290px] flex flex-col pl-5 gap-3 pr-7">
+          <h1 className="font-[Inter] font-semibold text-[24px]">{title}</h1>
+          <p className="text-[16px] font-medium font-[Inter] text-[#686868]">
+            {description && "Heleleo fnfhfdjs"}
+          </p>
         </div>
       </Main>
     </Con>

@@ -1,11 +1,17 @@
-import AllImage from "../../components/allImage/AllImage";
-import Compania from "../../components/compania/Compania";
-import General from "../../components/general/General";
-import Gen from "../../components/general/gen/Gen";
-import Infromation from "../../components/information/Infromation";
-import Modal from "../../components/modal/Modal";
+import {
+  AllImage,
+  Compania,
+  Gen,
+  General,
+  Infromation,
+  Modal,
+  NewsCard,
+} from "../../components";
+import { useGlobalContext } from "../../context/Coin";
 
 const About = () => {
+  const { newCard } = useGlobalContext();
+
   return (
     <div className="flex flex-col">
       <Infromation />
@@ -22,6 +28,9 @@ const About = () => {
           description="Здесь должно быть короткий текс о новостях компании- 
         здесь будет отоброжаться толька 4 последних новостей остальные новости о компании будет в разделе Новости илил БЛОГ "
         />
+        {newCard?.map((item) => (
+          <NewsCard key={item?.id} data={item} />
+        ))}
       </div>
     </div>
   );
