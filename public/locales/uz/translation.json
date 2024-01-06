@@ -46,8 +46,8 @@
   "gen_about": "Kompaniyada Yangilik",
   "gen_description": "sdhbdshbsfjhbfjhbedn mfdsbfsdhfsdbeweknbhjdfscuyhjnds c",
 
-  "question_1": "Savollar",
-  "questions_2": "koplab tushadigan savollar",
+  "question_Subtitle": "Savollar",
+  "questions_Title": "koplab tushadigan savollar",
 
   "xonsolting_title": "Yoriqnoma",
   "xonsolting_about": "Yoriqnomaga Amal qiling bla bla bla",
@@ -61,5 +61,8 @@
   "location_1": "Assosiy Ofis:",
   "location_2": "Toshkent shahar Yakkasaory Imom At-Termiziy ko'chasi",
   "location_3": "Ishlab chiqarish kompleksi:",
-  "location_4": "Andijon viloyati Qorg'ontepa"
+  "location_4": "Andijon viloyati Qorg'ontepa",
+
+  "plus_modal_title": "Bizning Hodimlarimiz sizga 48 soat ichida bog'lanishadi",
+  "plus_modal_text": "Jonatish tugamisni bosing kompleksi"
 }

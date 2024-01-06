@@ -35,8 +35,8 @@ const TextCont = styled.div`
   color: #121014;
   text-align: right;
   font-family: Inter, sans-serif;
-  font-size: 14px;  
-  font-style: normal; 
+  font-size: 14px;
+  font-style: normal;
   font-weight: 500;
   line-height: 14px;
   display: flex;
@@ -57,6 +57,7 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: 6px;
   justify-content: end;
 `;
 
