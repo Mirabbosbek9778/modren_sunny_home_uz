@@ -4,6 +4,8 @@ import { PhoneInput } from "react-international-phone";
 const Inputs = styled.input`
   display: flex;
   height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
   /* padding: 21px 470px 20px 16px; */
   align-items: center;
   align-self: stretch;
@@ -16,6 +18,14 @@ const Inputs = styled.input`
   font-weight: 400;
   line-height: normal;
   outline: none;
+`;
+
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
 `;
 
 const Text = styled.div`
@@ -64,4 +74,4 @@ const InputTel = styled(PhoneInput)`
   border: 1px solid red;
   outline: none;
 `;
-export { Inputs, Text, Parag, Wrapper, Con, InputTel };
+export { Inputs, Text, Parag, Wrapper, Con, InputTel, Main };

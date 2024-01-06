@@ -5,7 +5,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 0 12px 0;
-
   border-bottom: 1px solid var(--Line-color, rgba(18, 16, 20, 0.05));
   background: var(--Background-BLUR, rgba(255, 255, 255, 0.4));
   backdrop-filter: blur(120.5999984741211px);
@@ -20,6 +19,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 0 16px;
 `;
 
 const Text = styled.h1`
