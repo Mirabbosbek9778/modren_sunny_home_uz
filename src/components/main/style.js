@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
   background: #0e677c;
-  padding: 8px 50px 8px 20px;
+  padding: 8px 50px 8px 50px;
   display: flex;
   justify-content: center;
 `;
@@ -25,9 +25,10 @@ const LanguageText = styled.div`
   color: ${({ colur }) => (colur ? "#FFF" : "#fff")};
   font-weight: ${({ colur }) => (colur ? "400" : "600")};
   opacity: ${({ colur }) => (colur ? "0.3" : "")};
-  /* &:hover {
-    color: white;
-  } */
+
+  &:active {
+    color: ${({ colur }) => (colur ? "white" : "black")};
+  }
 `;
 
 const Content = styled.div`
