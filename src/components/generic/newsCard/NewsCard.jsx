@@ -4,7 +4,7 @@ import { CardText, Con, Main, NewsCards } from "../../general/style";
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 const NewsCard = ({ data }) => {
-  const { subtitle, img } = data;
+  // const { subtitle, img } = data;
 
   return (
     <Con>

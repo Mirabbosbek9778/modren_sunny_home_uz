@@ -17,14 +17,14 @@ const BoxItem = ({ data }) => {
 
   const { t } = useTranslation;
 
-  const onMove = ({
-    target: {
-      dataset: { name },
-    },
-  }) => {
-    if (name === "right") slider.current.next();
-    if (name === "left") slider.current.prev();
-  };
+  // const onMove = ({
+  //   target: {
+  //     dataset: { name },
+  //   },
+  // }) => {
+  //   if (name === "right") slider.current.next();
+  //   if (name === "left") slider.current.prev();
+  // };
 
   return (
     <div className="w-[453px] h-[400px] flex">
@@ -65,14 +65,11 @@ const BoxItem = ({ data }) => {
             <div className="pl-10 ">
               <img src={img} alt="img" className="opacity-100" />
             </div>
-<<<<<<< HEAD
             <div>
               <img src={img} alt="img" />
             </div>
-=======
             <img src={img} alt="img" />
             <div>{"Otabek"}</div>
->>>>>>> 46967b5aba8090a461e369d36e53e2469760de4a
           </Carousel>
         </Modal>
       </Container>

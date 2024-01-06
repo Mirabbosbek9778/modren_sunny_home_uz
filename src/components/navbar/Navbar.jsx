@@ -20,7 +20,7 @@ import { Button, Dropdown, Space } from 'antd';
 const Navbar = () => {
   const navbarRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeAllInfo, setActiveAllInfo] = useState(false)
+  // const [activeAllInfo, setActiveAllInfo] = useState(false)
   const { t } = useTranslation();
 
   const handleScroll = () => {
