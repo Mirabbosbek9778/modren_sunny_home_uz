@@ -47,7 +47,7 @@ const Card = () => {
                   ? { transform: "scale(100%)", transition: "700ms" }
                   : { transform: "scale(85%)", transition: "500ms" }
               }
-              className="card-btn outline-none flex border mt-[37px] ml-2"
+              className="card-btn outline-none flex border mt-[15.5px] ml-2"
               onMouseOut={() => offBtn()}
               onMouseOver={() => onBtn()}
             >
