@@ -1,15 +1,19 @@
+import { useTranslation } from "react-i18next";
 import { Container, SmallText, Wrapper } from "../body/style";
 import { Medium, Small } from "../contacts/style";
 import { Buttons } from "../generic/listCard/style";
 import { Text } from "../modal/style";
 
 const BoxGalleru = () => {
+
+  const { t } = useTranslation()
+
   return (
     <Wrapper>
       <Container>
         <div className="pt-[74px]">
           <Small className="flex items-center gap-1">
-            <Medium size>Главная /</Medium>Блог
+            <Medium size>{t("boxGalleryTitle")} Главная  /</Medium>Блог
           </Small>
           <div className="flex justify-between pt-[74px]">
             <Text>Галерея сборных домов</Text>
