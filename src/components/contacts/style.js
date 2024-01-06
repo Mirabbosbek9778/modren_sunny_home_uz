@@ -55,7 +55,7 @@ const Button = styled.button`
   height: 68px;
   justify-content: center;
   align-items: center;
-  /* border-radius: 12px; */
+  border-radius: 12px;
   background: var(--Primary-Default, #0e677c);
   color: var(--BTN-text, #fff);
   text-align: center;

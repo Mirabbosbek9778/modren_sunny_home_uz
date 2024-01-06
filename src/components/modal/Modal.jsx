@@ -16,7 +16,7 @@ const Modal = () => {
   return (
     <Wrapper>
       <Con>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-7">
           <Text>{t("modal_title")}</Text>
           <Parag>{t("modal_about")}</Parag>
         </div>

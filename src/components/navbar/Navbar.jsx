@@ -61,7 +61,7 @@ const Navbar = () => {
         </Main>
         <Content>
           <Text size="true">{t("number")}</Text>
-          <Box style={{ marginTop: "6px" }}>
+          <Box>
             <div className="green-radius w-[6px] h-[6px]"></div>
             <TextCont>{t("set")}</TextCont>
           </Box>

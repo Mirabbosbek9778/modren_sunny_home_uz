@@ -52,6 +52,9 @@ const ModalText = styled.h1`
   font-weight: 700;
   line-height: normal;
   width: 581px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;
 
 const ModalButton = styled.button`
