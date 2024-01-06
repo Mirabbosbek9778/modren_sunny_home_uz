@@ -63,6 +63,5 @@ const InputTel = styled(PhoneInput)`
   width: 100%;
   border: 1px solid red;
   outline: none;
-  
 `;
 export { Inputs, Text, Parag, Wrapper, Con, InputTel };

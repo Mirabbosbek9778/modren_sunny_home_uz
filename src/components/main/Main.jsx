@@ -9,9 +9,12 @@ const Main = () => {
 
   const [, setSelectedLanguage] = useState("ru");
 
-  const handleLanguageClick = (lang) => {
+  const [activeLang, setActiveLang]=useState("rus")
+
+  const handleLanguageClick = (lang, langTime) => {
     setSelectedLanguage(lang);
     handleChange(lang);
+    setActiveLang(langTime)
   };
 
   const handleChange = (lang) => {
@@ -22,16 +25,15 @@ const Main = () => {
     <Wrapper>
       <Container>
         <Content>
-          <LanguageText
-            onClick={() => handleLanguageClick("ru")}
-            className="active:text-white"
+          <LanguageText style={activeLang == "rus" ? {color: "white"} : {color: "#FFF", opacity: "0.3"}}
+            onClick={() => handleLanguageClick("ru", "rus")}
           >
             Ru
           </LanguageText>
-          <LanguageText onClick={() => handleLanguageClick("en")}>
+          <LanguageText style={activeLang == "eng" ? {color: "white"}  : {color: "#FFF", opacity: "0.3"}} onClick={() => handleLanguageClick("en", "eng")}>
             Eng
           </LanguageText>
-          <LanguageText onClick={() => handleLanguageClick("uz")}>
+          <LanguageText style={activeLang == "uzb" ? {color: "white"}  : {color: "#FFF", opacity: "0.3"}} onClick={() => handleLanguageClick("uz", "uzb")}>
             Uz
           </LanguageText>
         </Content>
