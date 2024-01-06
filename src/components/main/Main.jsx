@@ -1,65 +1,39 @@
 import { Box, Container, Content, LanguageText, Wrapper } from "./style";
-// import Facebook from "../../assets/icons/facebook.svg";
-// import Instagram from "../../assets/icons/instagram.svg";
-// import Youtube from "../../assets/icons/youtube.svg";
-// import Linkedin from "../../assets/icons/linkedin.svg";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaceMain, InstaMain, LinkedMain, YouMain } from "../../assets";
+import "./index.css";
 
 const Main = () => {
-  const [, setAge] = useState("uz");
-  const [selectedLanguage, setSelectedLanguage] = useState("ru");
-
-  const handleLanguageClick = (lang) => {
-    setSelectedLanguage(lang);
-  };
-
   const { i18n } = useTranslation();
 
-  const handleChange = (e) => {
-    switch (e) {
-      case 0:
-        return "ru";
-      case 1:
-        return "eng";
-      case 2:
-        return "uz";
-    }
-    setAge(e);
-    changeLanguage(e);
+  const [, setSelectedLanguage] = useState("ru");
+
+  const [activeLang, setActiveLang]=useState("rus")
+
+  const handleLanguageClick = (lang, langTime) => {
+    setSelectedLanguage(lang);
+    handleChange(lang);
+    setActiveLang(langTime)
   };
 
-  const changeLanguage = (lan) => {
-    i18n.changeLanguage(lan);
+  const handleChange = (lang) => {
+    i18n.changeLanguage(lang);
   };
 
   return (
     <Wrapper>
       <Container>
         <Content>
-          <LanguageText
-            onClick={
-              (() => handleLanguageClick("ru"), () => handleChange("ru"))
-            }
-            colur={selectedLanguage !== "ru"}
+          <LanguageText style={activeLang == "rus" ? {color: "white"} : {color: "#FFF", opacity: "0.3"}}
+            onClick={() => handleLanguageClick("ru", "rus")}
           >
             Ru
           </LanguageText>
-          <LanguageText
-            onClick={
-              (() => handleLanguageClick("en"), () => handleChange("en"))
-            }
-            colur={selectedLanguage !== "en"}
-          >
+          <LanguageText style={activeLang == "eng" ? {color: "white"}  : {color: "#FFF", opacity: "0.3"}} onClick={() => handleLanguageClick("en", "eng")}>
             Eng
           </LanguageText>
-          <LanguageText
-            onClick={
-              (() => handleLanguageClick("uz"), () => handleChange("uz"))
-            }
-            colur={selectedLanguage !== "uz"}
-          >
+          <LanguageText style={activeLang == "uzb" ? {color: "white"}  : {color: "#FFF", opacity: "0.3"}} onClick={() => handleLanguageClick("uz", "uzb")}>
             Uz
           </LanguageText>
         </Content>

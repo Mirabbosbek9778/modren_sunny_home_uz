@@ -45,7 +45,7 @@ const Wrapper = styled.div`
   justify-content: center;
   background-color: #f0f2f4;
   padding-bottom: 6px;
-  padding: 0 20px 150px 20px;
+  padding: 0 50px 150px 0px;
 `;
 
 const Con = styled.div`

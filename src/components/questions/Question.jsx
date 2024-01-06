@@ -11,8 +11,8 @@ const Question = () => {
     <Wrapper>
       <Container>
         <div className="flex flex-col gap-4">
-          <ONas>{t("question_1")}</ONas>
-          <Text>{t("questions_2")}</Text>
+          <ONas>{t("question_Subtitle")}</ONas>
+          <Text>{t("questions_Title")}</Text>
         </div>
         <QuesCard />
       </Container>

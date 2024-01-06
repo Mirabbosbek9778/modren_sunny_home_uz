@@ -47,7 +47,7 @@ const Card = () => {
                   ? { transform: "scale(100%)", transition: "700ms" }
                   : { transform: "scale(85%)", transition: "500ms" }
               }
-              className="card-btn outline-none flex border-none pt-[10px]"
+              className="card-btn outline-none flex border mt-[15.5px] ml-2"
               onMouseOut={() => offBtn()}
               onMouseOver={() => onBtn()}
             >
@@ -74,10 +74,7 @@ const Card = () => {
               footer={null}
             >
               <div className="flex flex-col justify-center gap-10 mt-16 w-full items-center mb-16">
-                <ModalText className="flex justify-center  w-full">
-                  Наши сотрудники позвонят вам в течении 48 часов и ответят на
-                  все ваши вопросы
-                </ModalText>
+                <ModalText>{t("plus_modal_title")}</ModalText>
                 <div className="flex flex-col gap-3">
                   <Input
                     type="text"
@@ -92,12 +89,9 @@ const Card = () => {
                     size="true"
                   />
                   <div className="flex items-center">
-                    <P>
-                      Нажимая на кнопку «Отправить» вы соглашаетесьс политикой
-                      конфиденциальности
-                    </P>
+                    <P>{t("plus_modal_text")}</P>
                     <ModalButton onClick={() => setOpen(false)}>
-                      Отправить
+                      {t("modal_button")}
                     </ModalButton>
                   </div>
                 </div>
