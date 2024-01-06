@@ -17,15 +17,6 @@ const BoxItem = ({ data }) => {
 
   const { t } = useTranslation;
 
-  // const onMove = ({
-  //   target: {
-  //     dataset: { name },
-  //   },
-  // }) => {
-  //   if (name === "right") slider.current.next();
-  //   if (name === "left") slider.current.prev();
-  // };
-
   return (
     <div className="w-[453px] h-[400px] flex">
       <Container>
@@ -53,10 +44,10 @@ const BoxItem = ({ data }) => {
                     location.pathname === "/" ? "nav-link active" : "nav-link"
                   }
                 >
-                  {t("gallery_title1")}
+                  {/* {t("gallery_title1")} */}
                 </ModalButton>
-                <ModalButton>{t("gallery_title2")}</ModalButton>
-                <ModalButton>{t("footer_2")}</ModalButton>
+                {/* <ModalButton>{t("gallery_title2")}</ModalButton> */}
+                {/* <ModalButton>{t("footer_2")}</ModalButton> */}
               </div>
             </ModalFooter>
           }

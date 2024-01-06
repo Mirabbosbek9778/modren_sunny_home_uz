@@ -3,27 +3,27 @@ import { Medium, Small } from "../contacts/style";
 import { Text } from "../modal/style";
 import { Whitetext } from "../generic/listCard/style";
 import { Blog1 } from "../../assets";
+import { useTranslation } from "react-i18next";
 
 const BlogBody = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper>
       <Container>
         <div className="pt-[74px]">
           <Small className="flex items-center gap-1">
-            <Medium size>Главная /</Medium>Блог
+            <Medium size>{t("blog_gen")} /</Medium>
+            {t("gen_title")}
           </Small>
           <div className="flex justify-between pt-[74px]">
-            <Text>Новости компании</Text>
-            <SmallText>
-              Здесь должно быть короткий текс о новостях компании- здесь будет
-              отоброжаться толька 4 последних новостей остальные новости о
-              компании будет в разделе Новости или БЛОГ
-            </SmallText>
+            <Text>{t("gen_about")}</Text>
+            <SmallText>{t("blog_about")}</SmallText>
           </div>
         </div>
         <div className="relative">
           <Whitetext className="absolute z-50 top-[52px] left-10">
-            Заголовок новости не более 2 строк
+            {t("blog_des")}
           </Whitetext>
           <img src={Blog1} alt="Blog1" />
           <svg

@@ -1,12 +1,14 @@
-import Gen from "../../components/general/gen/Gen";
-import NewsCard from "../../components/generic/newsCard/NewsCard";
-import Modal from "../../components/modal/Modal";
-import Social from "../../components/social/Social";
 import { useNavigate } from "react-router-dom";
 import TextProduct from "../../assets/text/TextProduct";
 import { Box } from "../../components/detail/styel";
-import DetailComponent from "../../components/detail/Detail";
 import { useGlobalContext } from "../../context/Coin";
+import {
+  DetailComponent,
+  Gen,
+  Modal,
+  NewsCard,
+  Social,
+} from "../../components";
 
 const Product = () => {
   const navigate = useNavigate();

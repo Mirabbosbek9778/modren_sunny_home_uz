@@ -51,7 +51,7 @@ const Inputs = styled.input`
 
 const Button = styled.button`
   display: flex;
-  width: 139px;
+  width: 100%;
   height: 68px;
   justify-content: center;
   align-items: center;

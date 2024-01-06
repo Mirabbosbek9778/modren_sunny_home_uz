@@ -1,6 +1,4 @@
-import Contacts from "../../components/contacts/Contacts";
-import Maps from "../../components/map/Maps";
-import Social from "../../components/social/Social";
+import { Contacts, Maps, Social } from "../../components";
 
 const Contact = () => {
   return (

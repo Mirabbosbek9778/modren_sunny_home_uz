@@ -1,5 +1,4 @@
-import AllInformation from "../../components/allInformation/AllInformation";
-import Xonsulting from "../../components/xonsulting/Xonsulting";
+import { AllInformation, Xonsulting } from "../../components";
 
 const Information = () => {
   return (

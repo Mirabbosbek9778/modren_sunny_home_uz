@@ -3,7 +3,6 @@ import { PhoneInput } from "react-international-phone";
 
 const Inputs = styled.input`
   display: flex;
-  height: 60px;
   padding-left: 10px;
   padding-right: 10px;
   /* padding: 21px 470px 20px 16px; */
@@ -18,6 +17,7 @@ const Inputs = styled.input`
   font-weight: 400;
   line-height: normal;
   outline: none;
+  height: ${({ colur }) => (colur ? "124px" : "60px")};
 `;
 
 const Main = styled.div`

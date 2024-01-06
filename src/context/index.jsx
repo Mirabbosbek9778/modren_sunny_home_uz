@@ -55,11 +55,5 @@ export const GlobalProvider = ({ children }) => {
     isLoading,
   };
 
-  return (
-    <CoinContext.Provider
-      value={value} 
-    >
-      {children}
-    </CoinContext.Provider>
-  );
+  return <CoinContext.Provider value={value}>{children}</CoinContext.Provider>;
 };

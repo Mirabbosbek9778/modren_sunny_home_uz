@@ -1,14 +1,20 @@
-import Body from "../../components/body/Body";
-import BodyItem from "../../components/body/bodyItem/BodyItem";
-import General from "../../components/general/General";
-import Gen from "../../components/general/gen/Gen";
-import Modal from "../../components/modal/Modal";
-import Products from "../../components/products/Products";
-import Question from "../../components/questions/Question";
-import Social from "../../components/social/Social";
-import Xonsulting from "../../components/xonsulting/Xonsulting";
+import {
+  Body,
+  BodyItem,
+  Gen,
+  General,
+  Modal,
+  NewsCard,
+  Products,
+  Question,
+  Social,
+  Xonsulting,
+} from "../../components";
+import { useGlobalContext } from "../../context/Coin";
 
 const Home = () => {
+  const { newCard } = useGlobalContext();
+
   return (
     <div>
       <Body />
@@ -29,6 +35,9 @@ const Home = () => {
         description="Здесь должно быть короткий текс о новостях компании- 
           здесь будет отоброжаться толька 4 последних новостей остальные новости о компании будет в разделе Новости или БЛОГ "
       />
+      {newCard?.map((item) => (
+        <NewsCard key={item?.id} data={item} />
+      ))}
       <Question />
       <Xonsulting />
     </div>

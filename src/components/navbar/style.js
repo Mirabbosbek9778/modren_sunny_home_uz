@@ -26,7 +26,7 @@ const Text = styled.h1`
   color: #121014;
   font-family: Inter, sans-serif;
   font-style: normal;
-  font-weight: ${({ size }) => (size ? "700" : "6 00")};
+  font-weight: ${({ size }) => (size ? "700" : "600")};
   line-height: 100%;
   text-align: ${({ size }) => (size ? "right" : "")};
 `;
