@@ -9,13 +9,22 @@ import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 const BoxItem = ({ data }) => {
-  const { img, subtitle, subtitle_en, subtitle_ru } = data;
+  const { img, subtitle } = data;
 
   const [open, setOpen] = useState(false);
 
   const onChange = (currentSlide) => {};
 
   const { t } = useTranslation;
+
+  const onMove = ({
+    target: {
+      dataset: { name },
+    },
+  }) => {
+    if (name === "right") slider.current.next();
+    if (name === "left") slider.current.prev();
+  };
 
   return (
     <div className="w-[453px] h-[400px] flex">
@@ -25,6 +34,7 @@ const BoxItem = ({ data }) => {
         <ButtonPlus onClick={() => setOpen(true)}>
           <img src={Plus} alt="Plus" />
         </ButtonPlus>
+
         <Modal
           className="border bg-[rgba(107, 104, 109, 0.7)] bg-opacity-5 "
           centered
@@ -55,9 +65,14 @@ const BoxItem = ({ data }) => {
             <div className="pl-10 ">
               <img src={img} alt="img" className="opacity-100" />
             </div>
+<<<<<<< HEAD
             <div>
               <img src={img} alt="img" />
             </div>
+=======
+            <img src={img} alt="img" />
+            <div>{"Otabek"}</div>
+>>>>>>> 46967b5aba8090a461e369d36e53e2469760de4a
           </Carousel>
         </Modal>
       </Container>

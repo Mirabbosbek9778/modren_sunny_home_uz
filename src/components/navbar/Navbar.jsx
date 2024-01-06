@@ -14,9 +14,13 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { Button, Dropdown, Space } from 'antd';
+
+
 const Navbar = () => {
   const navbarRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeAllInfo, setActiveAllInfo] = useState(false)
   const { t } = useTranslation();
 
   const handleScroll = () => {
@@ -35,6 +39,25 @@ const Navbar = () => {
     };
   }, []);
 
+  const items = [
+    {
+      key: '1',
+      label: (
+        <NavLink rel="noopener noreferrer" to='/information'>
+          {t("footer_2")}
+        </NavLink>
+      ),
+    },
+    {
+      key: '2',
+      label: (
+        <NavLink rel="noopener noreferrer" to='information'>
+          {t("footer_4")}
+        </NavLink>
+      ),
+    },
+  ];
+
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
       <Container>
@@ -49,13 +72,29 @@ const Navbar = () => {
           <NavLink to="/gallery">
             <Text>{t("gallery")}</Text>
           </NavLink>
-          <NavLink to="/information">
+          {/* <NavLink to="/information">
             <Text>{t("all_infromation")}</Text>
-          </NavLink>
+          </NavLink> */}
+
+          <Space direction="vertical">
+            <Space wrap>
+              <Dropdown
+                menu={{
+                  items,
+                }}
+                placement="bottom"
+              >
+                <Button style={{ border: "none" }} >{t("all_infromation")}</Button>
+                {/* <Text>{t("all_infromation")}</Text> */}
+              </Dropdown>
+
+            </Space>
+          </Space>
           <NavLink to="/blog">
             <Text>{t("blog")}</Text>
           </NavLink>
-          <NavLink to="/contact">
+
+          <NavLink to="/contact" >
             <Text>{t("contact")}</Text>
           </NavLink>
         </Main>
