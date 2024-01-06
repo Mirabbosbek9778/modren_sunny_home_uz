@@ -1,12 +1,10 @@
-import { Container, Input, Main, ModalButton, ModalText, Text } from "../style";
+import { Container, Main, Text } from "../style";
 import { useState } from "react";
-import { Modal } from "antd";
-import { P } from "../../../contacts/style";
 import { Plus } from "../../../../assets";
 import { useTranslation } from "react-i18next";
 
 const Item = () => {
-  const [open, setOpen] = useState(false);
+  const [, setOpen] = useState(false);
   const { t } = useTranslation();
 
   return (
@@ -22,43 +20,10 @@ const Item = () => {
               onClick={() => setOpen(true)}
               className="border-none outline-none pt-[85px] pr-[1px]"
             >
-              <img src={Plus} alt="Plus" />
+              <a href="/product">
+                <img src={Plus} alt="Plus" />
+              </a>
             </div>
-            <Modal
-              centered
-              open={open}
-              width={1000}
-              className="outline-none"
-              visible={open}
-              footer={null}
-            >
-              <div className="flex flex-col justify-center gap-10 mt-16 w-full items-center mb-16">
-                <ModalText className="flex justify-center  w-full">
-                  Наши сотрудники позвонят вам в течении 48 часов и ответят на
-                  все ваши вопросы
-                </ModalText>
-                <div className="flex flex-col gap-3">
-                  <Input
-                    type="text"
-                    placeholder="Ваше имя"
-                    className="text-black"
-                  />
-                  <Input type="tel" placeholder="+998 ___ __ __" />
-                  <Input
-                    type="text"
-                    placeholder="Комментарий или вопрос"
-                    className="h-[124px]"
-                    size="true"
-                  />
-                  <div className="flex items-center">
-                    <P>{t("item_modal_title")}</P>
-                    <ModalButton onClick={() => setOpen(false)}>
-                      {t("modal_button")}
-                    </ModalButton>
-                  </div>
-                </div>
-              </div>
-            </Modal>
           </div>
         </div>
       </Main>

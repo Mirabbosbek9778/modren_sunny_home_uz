@@ -1,32 +1,43 @@
 import { useState } from "react";
 import { Button, P } from "../contacts/style";
-import { Con, Inputs, Parag, Text, Wrapper } from "./style";
+import { Con, Inputs, Main, Parag, Text, Wrapper } from "./style";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 import { useTranslation } from "react-i18next";
 
+import "react-phone-input-2/lib/style.css";
+
 const Modal = () => {
-  const notify = () => toast("отправить запись ");
-  const [, setPhone] = useState("");
+  const notify = () => toast("отправить запись");
+  const [, setPhone] = useState("+998 ");
 
   const { t } = useTranslation();
 
   return (
     <Wrapper>
       <Con>
-        <div className="flex flex-col items-center justify-center gap-7">
+        <Main>
           <Text>{t("modal_title")}</Text>
           <Parag>{t("modal_about")}</Parag>
-        </div>
-        <div className="flex flex-col gap-3 items-center">
-          <Inputs type="text" placeholder="Ваше имя" colur="true" />
+        </Main>
+        <div className="flex flex-col gap-3 items-center w-[563px]">
+          <Inputs type="text" placeholder="Ваше имя" />
           <PhoneInput
             country={"uz"}
             onChange={(phone) => setPhone({ phone })}
+            inputStyle={{
+              width: "100%",
+              height: "60px",
+              background: "#f0f2f4",
+              border: "none",
+              outline: "none",
+              color: "#686868",
+              fontSize: "16px",
+            }}
           />
-          <Inputs required
+          <Inputs
+            required
             type="text"
             placeholder="Комментарий или вопрос"
             className="h-[124px]"

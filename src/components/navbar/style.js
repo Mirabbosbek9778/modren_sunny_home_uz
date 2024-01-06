@@ -5,7 +5,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 0 12px 0;
-
   border-bottom: 1px solid var(--Line-color, rgba(18, 16, 20, 0.05));
   background: var(--Background-BLUR, rgba(255, 255, 255, 0.4));
   backdrop-filter: blur(120.5999984741211px);
@@ -20,13 +19,14 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 0 16px;
 `;
 
 const Text = styled.h1`
   color: #121014;
   font-family: Inter, sans-serif;
   font-style: normal;
-  font-weight: ${({ size }) => (size ? "700" : "6 00")};
+  font-weight: ${({ size }) => (size ? "700" : "600")};
   line-height: 100%;
   text-align: ${({ size }) => (size ? "right" : "")};
 `;

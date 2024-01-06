@@ -25,13 +25,16 @@ const CardText = styled.div`
   line-height: normal;
   text-transform: uppercase;
   align-self: stretch;
+  width: 290.5px;
+  /* border: 1px solid red; */
 `;
 
 const Con = styled.div`
   display: flex;
   gap: 3.5px;
   justify-content: center;
-  background-color: #F0F2F4;
+  background-color: #f0f2f4;
+  padding-bottom: 150px;
 `;
 
 const Main = styled.div`

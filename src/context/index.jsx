@@ -49,14 +49,11 @@ export const GlobalProvider = ({ children }) => {
   }, []);
 
   const value = {
-    productCard, newCard, dataGallery, isLoading
-  }
+    productCard,
+    newCard,
+    dataGallery,
+    isLoading,
+  };
 
-  return (
-    <CoinContext.Provider
-      value={value} 
-    >
-      {children}
-    </CoinContext.Provider>
-  );
+  return <CoinContext.Provider value={value}>{children}</CoinContext.Provider>;
 };

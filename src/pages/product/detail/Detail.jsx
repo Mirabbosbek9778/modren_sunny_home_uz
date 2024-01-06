@@ -1,11 +1,13 @@
 import TextProduct from "../../../assets/text/TextProduct";
 import { useParams } from "react-router-dom";
-import SingleCard from "../../../components/generic/singleCard/SingleCard";
 import { useGlobalContext } from "../../../context/Coin";
-import Modal from "../../../components/modal/Modal";
-import Social from "../../../components/social/Social";
-import Project from "../../../components/project/Project";
-import Xonsulting from "../../../components/xonsulting/Xonsulting";
+import {
+  Modal,
+  Project,
+  SingleCard,
+  Social,
+  Xonsulting,
+} from "../../../components";
 
 const Detail = () => {
   const { id } = useParams();

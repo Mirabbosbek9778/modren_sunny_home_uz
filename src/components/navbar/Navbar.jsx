@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/logo/Logo";
 import "./Style.scss";
-
 import {
   Box,
   Container,
@@ -13,14 +12,11 @@ import {
 } from "./style";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { Button, Dropdown, Space } from 'antd';
-
+import { Dropdown, Menu } from "antd";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeAllInfo, setActiveAllInfo] = useState(false)
   const { t } = useTranslation();
 
   const handleScroll = () => {
@@ -41,22 +37,69 @@ const Navbar = () => {
 
   const items = [
     {
-      key: '1',
+      key: "1",
       label: (
-        <NavLink rel="noopener noreferrer" to='/information'>
+        <NavLink
+          to="/information"
+          className="hover:border-none outline-none text-lg font-semibold"
+        >
           {t("footer_2")}
         </NavLink>
       ),
     },
     {
-      key: '2',
+      key: "2",
       label: (
-        <NavLink rel="noopener noreferrer" to='information'>
+        <NavLink
+          to="/information"
+          className="hover:border-none outline-none text-lg font-semibold"
+        >
           {t("footer_4")}
         </NavLink>
       ),
     },
   ];
+
+  const itemsProduct = [
+    {
+      key: "1",
+      label: (
+        <NavLink
+          to="/information"
+          className="hover:border-none outline-none text-base font-semibold"
+        >
+          {t("dropdown_title")}
+        </NavLink>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <NavLink
+          to="/information"
+          className="hover:border-none outline-none text-base font-semibold"
+        >
+          {t("footer_2")}
+        </NavLink>
+      ),
+    },
+  ];
+
+  const productsMenu = (
+    <Menu>
+      {itemsProduct?.map((item) => (
+        <Menu.Item key={item?.key}>{item?.label}</Menu.Item>
+      ))}
+    </Menu>
+  );
+
+  const informationMenu = (
+    <Menu>
+      {items?.map((item) => (
+        <Menu.Item key={item?.key}>{item?.label}</Menu.Item>
+      ))}
+    </Menu>
+  );
 
   return (
     <Wrapper scrolled={isScrolled} ref={navbarRef}>
@@ -66,35 +109,26 @@ const Navbar = () => {
           <NavLink to="/about">
             <Text>{t("about")}</Text>
           </NavLink>
-          <NavLink to="/product">
-            <Text>{t("products")}</Text>
-          </NavLink>
+          <Dropdown overlay={productsMenu} placement="bottomCenter">
+            <Text className="hover:border-none outline-none text-base font-semibold">
+              {t("products")}
+            </Text>
+          </Dropdown>
+
           <NavLink to="/gallery">
             <Text>{t("gallery")}</Text>
           </NavLink>
-          {/* <NavLink to="/information">
-            <Text>{t("all_infromation")}</Text>
-          </NavLink> */}
 
-          <Space direction="vertical">
-            <Space wrap>
-              <Dropdown
-                menu={{
-                  items,
-                }}
-                placement="bottom"
-              >
-                <Button style={{ border: "none" }} >{t("all_infromation")}</Button>
-                {/* <Text>{t("all_infromation")}</Text> */}
-              </Dropdown>
-
-            </Space>
-          </Space>
+          <Dropdown overlay={informationMenu} placement="bottomCenter">
+            <Text className="hover:border-none outline-none text-base font-semibold">
+              {t("all_infromation")}
+            </Text>
+          </Dropdown>
           <NavLink to="/blog">
             <Text>{t("blog")}</Text>
           </NavLink>
 
-          <NavLink to="/contact" >
+          <NavLink to="/contact">
             <Text>{t("contact")}</Text>
           </NavLink>
         </Main>
