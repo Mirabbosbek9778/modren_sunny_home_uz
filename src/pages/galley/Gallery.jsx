@@ -19,6 +19,8 @@ const Gallery = () => {
         ) : (
           dataGallery?.map((item) => <BoxItem key={item?.i} data={item} />)
         )}
+
+
       </Wrap>
       <div className="mt-[-100px]">
         <Gen
