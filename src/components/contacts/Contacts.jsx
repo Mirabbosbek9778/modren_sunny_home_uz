@@ -5,8 +5,13 @@ import { Bold, Button, Inputs, Medium, P, Small } from "./style";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import { useState } from "react";
+
 const Contacts = () => {
   const notify = () => toast("отправить запись ");
+  const [, setPhone] = useState("+998 ");
 
   return (
     <Wrapper>
@@ -53,9 +58,23 @@ const Contacts = () => {
               </Small>
             </div>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 w-[630px]">
             <Inputs type="text" placeholder="Ваше имя" />
-            <Inputs type="tel" placeholder="+998 ___ __ __" />
+            <PhoneInput
+              country={"uz"}
+              onChange={(phone) => setPhone({ phone })}
+              buttonStyle={{ border: "none", backgroundColor: "white" }}
+              inputStyle={{
+                width: "100%",
+                height: "60px",
+                background: "white",
+                border: "none",
+                outline: "none",
+                color: "#686868",
+                fontSize: "16px",
+                borderRadius: "12px",
+              }}
+            />
             <Inputs
               type="text"
               placeholder="Комментарий или вопрос"

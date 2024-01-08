@@ -26,6 +26,7 @@ const Modal = () => {
           <PhoneInput
             country={"uz"}
             onChange={(phone) => setPhone({ phone })}
+            buttonStyle={{ border: "none", backgroundColor: "#f0f2f4" }}
             inputStyle={{
               width: "100%",
               height: "60px",

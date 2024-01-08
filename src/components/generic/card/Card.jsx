@@ -5,10 +5,13 @@ import { Modal } from "antd";
 import { P } from "../../contacts/style";
 import "./Style.scss";
 import { useTranslation } from "react-i18next";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const Card = () => {
   const [open, setOpen] = useState(false);
   const [formSubmitted] = useState(false);
+  const [, setPhone] = useState("+998 ");
 
   const [, setBtnRotate] = useState(false);
   const [btnScale, setBtnScale] = useState(false);
@@ -81,7 +84,21 @@ const Card = () => {
                     placeholder="Ваше имя"
                     className="text-black"
                   />
-                  <Input type="tel" placeholder="+998 ___ __ __" />
+                  <PhoneInput
+                    country={"uz"}
+                    onChange={(phone) => setPhone({ phone })}
+                    buttonStyle={{ border: "none" }}
+                    inputStyle={{
+                      width: "100%",
+                      height: "60px",
+                      background: "#f0f2f4",
+                      border: "none",
+                      outline: "none",
+                      color: "#686868",
+                      fontSize: "16px",
+                      borderRadius: "12px",
+                    }}
+                  />
                   <Input
                     type="text"
                     placeholder="Комментарий или вопрос"

@@ -34,7 +34,9 @@ const Inputs = styled.input`
   background-color: ${({ colur }) => (colur ? "#F0F2F4" : "#fff")};
   display: flex;
   height: ${({ size }) => (size ? "124px" : "68px")};
-  padding: 0px 537px 0px 16px;
+  padding-left: 16px;
+  padding-right: 10px;
+  /* padding: 0px 537px 0px 16px; */
   align-items: ${({ size }) => (size ? "" : "center")};
   padding-bottom: ${({ size }) => (size ? "70px" : "")};
   align-self: stretch;
